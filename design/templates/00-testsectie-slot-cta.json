@@ -1,0 +1,87 @@
+{
+  "version": "0.4",
+  "title": "Prorijschool - testsectie slot-CTA",
+  "type": "container",
+  "content": [
+    {
+      "id": "pro0001",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "container_type": "flex",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "content_width": "boxed",
+        "boxed_width": { "unit": "px", "size": 1220 },
+        "padding": { "unit": "px", "top": "96", "right": "24", "bottom": "96", "left": "24", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#14161F",
+        "_css_classes": "pro-vlak-nacht pro-korrel"
+      },
+      "elements": [
+        {
+          "id": "pro0002",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Klaar om te <span class=\"pro-accent\">beginnen?</span>",
+            "header_size": "h2",
+            "align": "center",
+            "title_color": "#FFFFFF"
+          },
+          "elements": []
+        },
+        {
+          "id": "pro0003",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>Een proefles is genoeg om te weten of het klikt. Vrijblijvend, en je weet meteen hoeveel lessen je waarschijnlijk nodig hebt.</p>",
+            "align": "center",
+            "text_color": "#B6AF9F"
+          },
+          "elements": []
+        },
+        {
+          "id": "pro0004",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "container_type": "flex",
+            "flex_direction": "row",
+            "flex_justify_content": "center",
+            "flex_wrap": "wrap",
+            "flex_gap": { "unit": "px", "size": 13, "column": "13", "row": "13" },
+            "margin": { "unit": "px", "top": "40", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+            "content_width": "full"
+          },
+          "elements": [
+            {
+              "id": "pro0005",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Proefles boeken",
+                "link": { "url": "#aanvraag", "is_external": "", "nofollow": "" },
+                "_css_classes": "pro-btn pro-btn--zand"
+              },
+              "elements": []
+            },
+            {
+              "id": "pro0006",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Bel 020 000 0000",
+                "link": { "url": "tel:+31200000000", "is_external": "", "nofollow": "" },
+                "_css_classes": "pro-btn pro-btn--rand"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": []
+}

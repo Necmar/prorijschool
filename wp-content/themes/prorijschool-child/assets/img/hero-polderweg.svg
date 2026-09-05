@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Polderweg bij avondlicht">
+  <defs>
+    <linearGradient id="lucht" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#171B33"/>
+      <stop offset=".34"  stop-color="#3A3357"/>
+      <stop offset=".58"  stop-color="#8A5E5A"/>
+      <stop offset=".76"  stop-color="#D98F5A"/>
+      <stop offset=".88"  stop-color="#EFC287"/>
+      <stop offset="1"    stop-color="#F6DCA4"/>
+    </linearGradient>
+    <radialGradient id="zon" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFE9BC" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFD089" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="asfalt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2733"/>
+      <stop offset="1" stop-color="#15141C"/>
+    </linearGradient>
+    <linearGradient id="berm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A4436"/>
+      <stop offset="1" stop-color="#24211B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#lucht)"/>
+  <circle cx="1120" cy="560" r="260" fill="url(#zon)"/>
+  <circle cx="1120" cy="558" r="46" fill="#FFEFCB" opacity=".85"/>
+
+  <!-- wolkenbanden -->
+  <g opacity=".30" fill="#F7DCB0">
+    <rect x="180"  y="300" width="360" height="12" rx="6"/>
+    <rect x="620"  y="258" width="240" height="10" rx="5"/>
+    <rect x="980"  y="330" width="420" height="13" rx="6"/>
+    <rect x="360"  y="392" width="300" height="10" rx="5"/>
+    <rect x="1120" y="418" width="330" height="11" rx="5"/>
+  </g>
+
+  <!-- polderhorizon -->
+  <rect x="0" y="590" width="1600" height="310" fill="url(#berm)"/>
+  <path d="M0 592 H1600" stroke="#6A5F45" stroke-width="2" opacity=".5"/>
+
+  <!-- molen -->
+  <g fill="#191722" opacity=".92">
+    <path d="M196 592 L214 500 L246 500 L264 592 Z"/>
+    <rect x="219" y="482" width="22" height="20" rx="4"/>
+  </g>
+  <g stroke="#191722" stroke-width="5.5" stroke-linecap="round" opacity=".92">
+    <path d="M230 490 L230 424"/><path d="M230 490 L296 490"/>
+    <path d="M230 490 L230 556"/><path d="M230 490 L164 490"/>
+  </g>
+
+  <!-- bomenrij -->
+  <g fill="#1B1924" opacity=".85">
+    <ellipse cx="420" cy="566" rx="15" ry="30"/><rect x="417" y="566" width="6" height="28"/>
+    <ellipse cx="472" cy="572" rx="13" ry="25"/><rect x="469" y="572" width="6" height="22"/>
+    <ellipse cx="524" cy="562" rx="16" ry="33"/><rect x="521" y="562" width="6" height="32"/>
+    <ellipse cx="1380" cy="568" rx="14" ry="28"/><rect x="1377" y="568" width="6" height="26"/>
+    <ellipse cx="1436" cy="574" rx="12" ry="23"/><rect x="1433" y="574" width="6" height="20"/>
+  </g>
+
+  <!-- weg in perspectief -->
+  <path d="M812 592 L1600 900 L120 900 Z" fill="url(#asfalt)"/>
+  <path d="M812 592 L1420 900 L300 900 Z" fill="#211F2A"/>
+  <path d="M806 592 L640 900 L560 900 Z" fill="#2E2B38" opacity=".6"/>
+
+  <!-- middenbelijning -->
+  <g fill="#F6DCA4">
+    <rect x="809" y="600" width="6"  height="14" rx="3"  opacity=".55"/>
+    <rect x="807" y="628" width="9"  height="20" rx="4"  opacity=".65"/>
+    <rect x="804" y="668" width="14" height="28" rx="6"  opacity=".75"/>
+    <rect x="799" y="722" width="22" height="38" rx="8"  opacity=".85"/>
+    <rect x="791" y="792" width="35" height="48" rx="10" opacity=".92"/>
+    <rect x="779" y="874" width="54" height="26" rx="12"/>
+  </g>
+
+  <!-- zijbelijning -->
+  <path d="M800 594 L190 900" stroke="#EBD5A8" stroke-width="4" opacity=".35"/>
+  <path d="M824 594 L1500 900" stroke="#EBD5A8" stroke-width="4" opacity=".35"/>
+
+  <!-- lantaarnpalen -->
+  <g stroke="#191722" stroke-width="5" opacity=".8" stroke-linecap="round">
+    <path d="M1180 592 L1180 470"/><path d="M1180 470 q30 0 34 24"/>
+    <path d="M1470 592 L1470 430"/><path d="M1470 430 q34 0 38 28"/>
+  </g>
+</svg>
