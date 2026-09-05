@@ -1,5 +1,16 @@
 # Fase 1 — GitHub en frontendpublicatie
 
+## Koppelstatus 5 september 2026
+
+- Lokale `origin`: `https://github.com/Necmar/prorijschool.git`.
+- Private GitHub-repository bestond al met README en projectplan; bestaande historie behouden bij samenvoegen.
+- Cloud86/Plesk: `shared21.cloud86-host.nl`, domein `prorijschool.necmardemo.nl`, site-ID 2190, subscription-ID 69.
+- Plesk-repository `prorijschool.git` haalt `main` succesvol op via SSH.
+- Aparte sleutel `prorijschoolreadonly`, in GitHub geregistreerd als `Cloud86 prorijschool — alleen lezen`.
+- Deployment staat op **Disabled / No deployment**. Er is nog geen frontend naar de webroot gepubliceerd.
+- Lokale Git-aanmelding voor Necmar is nog niet voltooid; fetch, historiesamenvoeging en push volgen daarna.
+- Het onderstaande inventarisatiegedeelte beschrijft de eerdere uitgangssituatie.
+
 Publieke website: WordPress + Elementor. Toekomstig CRM: aparte Laravel-app.
 Eerste publicatiedoel: https://prorijschool.necmardemo.nl/.
 
