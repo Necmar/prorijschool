@@ -1,6 +1,0 @@
-Testbestand voor het controleren van de keten GitHub -> cPanel -> prorijschool.necmardemo.nl
-
-Aangemaakt: 2026-09-05 14:30 UTC
-Doel: verifieren dat een push zichtbaar wordt na een pull vanaf cPanel.
-
-Dit bestand mag verwijderd worden zodra de test geslaagd is.
