@@ -1,55 +1,27 @@
-# ---------------------------------------------------------------
-# Prorijschool - .gitignore
-# Alleen maatwerkcode in Git. WordPress core, plugins van derden
-# en content blijven buiten de repo (zie projectplan 27).
-# ---------------------------------------------------------------
-
-# WordPress core
-/wp-admin/
-/wp-includes/
-/wp-*.php
-/index.php
-/license.txt
-/readme.html
-/xmlrpc.php
-
-# Configuratie en geheimen - NOOIT committen
-wp-config.php
-wp-config-local.php
-.env
-.env.*
-*.pem
-*.key
-
-# Uploads en cache
-/wp-content/uploads/
-/wp-content/upgrade/
-/wp-content/upgrade-temp-backup/
-/wp-content/cache/
-/wp-content/backup*/
-/wp-content/ai1wm-backups/
-/wp-content/debug.log
-/wp-content/advanced-cache.php
-/wp-content/object-cache.php
-
-# Plugins: alleen eigen plugins meenemen
-/wp-content/plugins/*
-!/wp-content/plugins/prorijschool-*/
-
-# Themes: alleen eigen child theme meenemen
-/wp-content/themes/*
-!/wp-content/themes/prorijschool-child/
-
-# Databasedumps: mappenstructuur wel, inhoud niet
-/db/*
-!/db/.gitkeep
-
-# Systeem en editor
-.DS_Store
-Thumbs.db
-desktop.ini
-*.log
-*.swp
-.idea/
-.vscode/
-node_modules/
+/*
+!/.gitignore
+!/.gitattributes
+!/.github/
+!/docs/
+!/scripts/
+!/wordpress/
+/scripts/*
+!/scripts/build-release.ps1
+/docs/*
+!/docs/fase-1.md
+/wordpress/*
+!/wordpress/wp-content/
+/wordpress/wp-content/*
+!/wordpress/wp-content/themes/
+/wordpress/wp-content/themes/*
+!/wordpress/wp-content/themes/necmar-rijschool/
+**/.env*
+**/wp-config.php
+**/*.sql
+**/*.sql.gz
+**/*.pem
+**/*.key
+**/node_modules/
+**/uploads/
+**/*.zip
+**/*.log
