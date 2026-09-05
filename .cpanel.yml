@@ -1,0 +1,19 @@
+---
+# ---------------------------------------------------------------
+# cPanel Git Version Control - deployment
+#
+# LET OP: pas DEPLOYPATH aan naar het werkelijke pad van de
+# demo-site voordat je dit bestand voor het eerst gebruikt.
+# Te vinden in cPanel onder File Manager of Domains.
+# ---------------------------------------------------------------
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/GEBRUIKERSNAAM/prorijschool.necmardemo.nl
+
+    # Child theme
+    - /bin/mkdir -p $DEPLOYPATH/wp-content/themes/prorijschool-child
+    - /bin/cp -R wp-content/themes/prorijschool-child/. $DEPLOYPATH/wp-content/themes/prorijschool-child/
+
+    # Eigen plugins (uitgeschakeld tot ze bestaan)
+    # - /bin/mkdir -p $DEPLOYPATH/wp-content/plugins
+    # - /bin/cp -R wp-content/plugins/. $DEPLOYPATH/wp-content/plugins/
