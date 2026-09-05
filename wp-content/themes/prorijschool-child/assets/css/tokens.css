@@ -1,0 +1,46 @@
+/**
+ * Prorijschool — designtokens (fase 1B)
+ *
+ * Deze waarden zijn de bron van waarheid. Dezelfde kleuren en maten
+ * staan ook in Elementor onder Site Settings > Global Colors/Fonts,
+ * zodat de visuele editor en het thema niet uit elkaar lopen.
+ * Zie docs/FASE-1C-ELEMENTOR.md voor de exacte Elementor-invulling.
+ */
+
+:root{
+  /* Kleur */
+  --pro-nacht:#14161F;
+  --pro-nacht-diep:#0C0E15;
+  --pro-zand:#E9C87F;
+  --pro-zand-diep:#D2A94F;
+  --pro-zand-zacht:#F7EBD2;
+  --pro-papier:#FBF7EF;
+  --pro-koraal:#FF5A36;
+  --pro-koraal-diep:#E8451F;
+  --pro-wit:#FFFFFF;
+  --pro-grijs:#6A6459;
+  --pro-grijs-licht:#948C7E;
+  --pro-lijn:#E9E0CF;
+  --pro-groen:#1FA855;      /* uitsluitend WhatsApp */
+  --pro-groen-diep:#17853F;
+
+  /* Ruimte — achtvoud */
+  --pro-s1:8px;  --pro-s2:16px; --pro-s3:24px;
+  --pro-s4:40px; --pro-s5:64px; --pro-s6:96px;
+
+  /* Vorm */
+  --pro-r:16px;
+  --pro-r-groot:22px;
+  --pro-r-rond:100px;
+
+  /* Diepte */
+  --pro-schaduw:0 2px 4px rgba(20,22,31,.04), 0 8px 24px rgba(20,22,31,.07);
+  --pro-schaduw-op:0 8px 16px rgba(20,22,31,.07), 0 24px 48px rgba(20,22,31,.12);
+
+  /* Beweging */
+  --pro-soepel:cubic-bezier(.2,.8,.3,1);
+
+  /* Typografie */
+  --pro-font-kop:'Sora', system-ui, sans-serif;
+  --pro-font-tekst:'Public Sans', system-ui, sans-serif;
+}
