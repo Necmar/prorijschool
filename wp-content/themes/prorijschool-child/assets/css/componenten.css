@@ -1,0 +1,363 @@
+/**
+ * Prorijschool — componentklassen
+ *
+ * Gebruik: geef een Elementor-container of -widget de klasse onder
+ * Geavanceerd > CSS-klassen. Elke klasse hieronder is ontworpen om
+ * bovenop native Elementor-widgets te werken, niet als vervanging.
+ *
+ * Geen enkele regel hier gaat uit van een HTML-widget.
+ */
+
+/* ============================================================
+   1. Basis
+   ============================================================ */
+
+body{
+  font-family:var(--pro-font-tekst);
+  background:var(--pro-papier);
+  color:var(--pro-nacht);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4,h5,h6,
+.elementor-heading-title{
+  font-family:var(--pro-font-kop);
+  font-weight:800;
+  line-height:1.06;
+  letter-spacing:-.042em;
+}
+
+.pro-leesbaar p{max-width:62ch}
+
+/* ============================================================
+   2. Knoppen — toekennen aan de Button-widget
+   ============================================================ */
+
+.pro-btn .elementor-button,
+a.pro-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--pro-font-kop);font-weight:700;font-size:1rem;
+  letter-spacing:-.012em;padding:17px 30px;min-height:56px;
+  border-radius:var(--pro-r-rond);border:2px solid transparent;
+  transition:transform .18s var(--pro-soepel),box-shadow .18s,
+             background-color .16s,color .16s,border-color .16s;
+}
+.pro-btn .elementor-button:hover,
+a.pro-btn:hover{transform:translateY(-2px)}
+.pro-btn .elementor-button:focus-visible,
+a.pro-btn:focus-visible{outline:3px solid var(--pro-zand);outline-offset:3px}
+
+.pro-btn--koraal .elementor-button,a.pro-btn--koraal{
+  background-color:var(--pro-koraal);color:#fff;
+  box-shadow:0 6px 18px rgba(255,90,54,.30);
+}
+.pro-btn--koraal .elementor-button:hover,a.pro-btn--koraal:hover{
+  background-color:var(--pro-koraal-diep);box-shadow:0 12px 28px rgba(255,90,54,.36);
+}
+
+.pro-btn--zand .elementor-button,a.pro-btn--zand{
+  background-color:var(--pro-zand);color:#2A2415;
+  box-shadow:0 6px 18px rgba(210,169,79,.30);
+}
+.pro-btn--zand .elementor-button:hover,a.pro-btn--zand:hover{background-color:var(--pro-zand-diep)}
+
+.pro-btn--nacht .elementor-button,a.pro-btn--nacht{background-color:var(--pro-nacht);color:#fff}
+.pro-btn--nacht .elementor-button:hover,a.pro-btn--nacht:hover{box-shadow:0 12px 28px rgba(20,22,31,.24)}
+
+.pro-btn--stil .elementor-button,a.pro-btn--stil{
+  background-color:#fff;color:var(--pro-nacht);border-color:var(--pro-lijn);
+}
+.pro-btn--stil .elementor-button:hover,a.pro-btn--stil:hover{border-color:var(--pro-zand-diep)}
+
+.pro-btn--rand .elementor-button,a.pro-btn--rand{background:transparent;border-color:currentColor}
+
+.pro-btn--wa .elementor-button,a.pro-btn--wa{background-color:var(--pro-groen);color:#fff}
+.pro-btn--wa .elementor-button:hover,a.pro-btn--wa:hover{background-color:var(--pro-groen-diep)}
+
+.pro-btn--vol,.pro-btn--vol .elementor-button{width:100%}
+
+.pro-btn .elementor-button-icon{transition:transform .2s var(--pro-soepel)}
+.pro-btn:hover .elementor-button-icon{transform:translateX(4px)}
+
+/* ============================================================
+   3. Sectiekop
+   ============================================================ */
+
+.pro-kop{max-width:44ch}
+.pro-streep{
+  width:52px;height:4px;border-radius:2px;
+  background:var(--pro-zand-diep);margin-bottom:var(--pro-s3);
+}
+.pro-leid{
+  color:var(--pro-grijs);
+  font-size:clamp(1.02rem,1.6vw,1.14rem);
+  max-width:52ch;
+}
+
+/* ============================================================
+   4. Kaarten
+   ============================================================ */
+
+.pro-kaart{
+  background:#fff;border-radius:var(--pro-r-groot);
+  box-shadow:var(--pro-schaduw);overflow:hidden;position:relative;
+  transition:transform .22s var(--pro-soepel),box-shadow .22s;
+}
+.pro-kaart:hover{transform:translateY(-5px);box-shadow:var(--pro-schaduw-op)}
+
+.pro-kaart--nacht{background:linear-gradient(158deg,#22252F 0%,var(--pro-nacht-diep) 100%);color:#fff}
+.pro-kaart--nacht .elementor-heading-title{color:#fff}
+.pro-kaart--nacht p{color:#B6AF9F}
+
+.pro-kaart--zand{background:linear-gradient(158deg,#F0D89E 0%,var(--pro-zand-diep) 100%);color:#2A2415}
+.pro-kaart--zand p{color:#584A28}
+
+@media(min-width:1025px){
+  .pro-mozaiek{grid-auto-rows:minmax(212px,auto)}
+  .pro-kaart--groot{grid-row:span 2}
+}
+
+/* ============================================================
+   5. Prijsblok
+   ============================================================ */
+
+.pro-prijs{
+  font-family:var(--pro-font-kop);font-weight:800;
+  font-size:3.05rem;letter-spacing:-.058em;line-height:1;
+}
+.pro-prijs-per{font-size:.93rem;color:var(--pro-grijs)}
+.pro-vlag{
+  display:inline-block;background:var(--pro-zand);color:#2A2415;
+  font-family:var(--pro-font-kop);font-weight:700;font-size:.77rem;
+  padding:6px 15px;border-radius:var(--pro-r-rond);
+}
+.pro-voordeel{
+  display:inline-block;background:var(--pro-zand-zacht);color:#7A5C10;
+  border-radius:var(--pro-r-rond);padding:7px 16px;
+  font-size:.86rem;font-weight:700;
+}
+.pro-kaart--nacht .pro-prijs{color:var(--pro-zand)}
+.pro-kaart--nacht .pro-voordeel{background:rgba(233,200,127,.18);color:var(--pro-zand)}
+
+@media(min-width:881px){
+  .pro-pakket-uit{transform:scale(1.05);z-index:2;position:relative}
+}
+
+.pro-lijst ul,.pro-lijst .elementor-icon-list-items{list-style:none;display:grid;gap:11px;padding:0}
+.pro-lijst li{padding-left:27px;position:relative;font-size:.96rem}
+.pro-lijst li::before{
+  content:"";position:absolute;left:0;top:10px;
+  width:13px;height:2px;border-radius:2px;background:var(--pro-zand-diep);
+}
+.pro-kaart--nacht .pro-lijst li::before{background:var(--pro-zand)}
+
+/* ============================================================
+   6. Hero
+   ============================================================ */
+
+.pro-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff}
+.pro-hero::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,
+    rgba(12,14,21,.86) 0%, rgba(12,14,21,.62) 42%,
+    rgba(12,14,21,.18) 68%, transparent 100%);
+}
+@media(max-width:860px){
+  .pro-hero::before{
+    background:linear-gradient(180deg,
+      rgba(12,14,21,.84) 0%, rgba(12,14,21,.66) 55%, rgba(12,14,21,.86) 100%);
+  }
+}
+.pro-hero>.e-con-inner,
+.pro-hero>.elementor-container{position:relative;z-index:2}
+
+.pro-hero-titel .elementor-heading-title{
+  font-size:clamp(2.9rem,7.6vw,5.3rem);
+  letter-spacing:-.052em;color:var(--pro-zand);
+}
+.pro-hero-titel .pro-wit{color:#fff}
+
+.pro-bewijs{border-top:1px solid rgba(233,200,127,.32);padding-top:var(--pro-s3)}
+.pro-bw{padding-right:30px;margin-right:30px;border-right:1px solid rgba(233,200,127,.28)}
+.pro-bw:last-child{border-right:0;padding-right:0;margin-right:0}
+.pro-bw-cijfer{
+  font-family:var(--pro-font-kop);font-weight:800;font-size:2rem;
+  letter-spacing:-.045em;line-height:1;color:var(--pro-zand);
+}
+.pro-bw-label{font-size:.85rem;color:#BDB6A7;margin-top:6px}
+
+/* ============================================================
+   7. Formulier — Elementor Pro Form-widget
+   ============================================================ */
+
+.pro-formulier{
+  background:#fff;border-radius:var(--pro-r-groot);
+  padding:clamp(26px,3.2vw,34px);
+  box-shadow:0 30px 70px rgba(8,10,18,.46);
+}
+.pro-formulier .elementor-field-group>label{
+  font-size:.82rem;font-weight:700;margin-bottom:6px;color:var(--pro-nacht);
+}
+.pro-formulier .elementor-field-textual{
+  padding:16px;border:2px solid var(--pro-lijn);border-radius:14px;
+  font-family:var(--pro-font-tekst);font-size:1rem;min-height:56px;
+  background:#fff;color:var(--pro-nacht);transition:border-color .15s;
+}
+.pro-formulier .elementor-field-textual:focus{
+  outline:0;border-color:var(--pro-zand-diep);box-shadow:none;
+}
+.pro-formulier .elementor-field-textual::placeholder{color:#B3AB9C}
+.pro-formulier .elementor-message{border-radius:12px;font-size:.92rem}
+
+/* ============================================================
+   8. Melding / urgentiebalk
+   ============================================================ */
+
+.pro-melding{background:var(--pro-nacht);color:#fff;font-size:.95rem}
+.pro-melding a{color:var(--pro-zand);font-weight:700;border-bottom:1.5px solid currentColor}
+.pro-melding a:hover{color:#fff;border-color:#fff}
+.pro-puls{
+  display:inline-block;width:9px;height:9px;border-radius:50%;
+  background:var(--pro-zand);
+  box-shadow:0 0 0 0 rgba(233,200,127,.7);animation:pro-puls 2.4s infinite;
+}
+@keyframes pro-puls{
+  70%{box-shadow:0 0 0 11px rgba(233,200,127,0)}
+  100%{box-shadow:0 0 0 0 rgba(233,200,127,0)}
+}
+
+/* ============================================================
+   9. Werkwijze
+   ============================================================ */
+
+.pro-stap{position:relative;padding-top:var(--pro-s3)}
+.pro-stap::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  border-radius:2px;background:var(--pro-zand-diep);
+}
+.pro-stap--slot::after{background:var(--pro-koraal)}
+.pro-stap-nr{
+  font-family:var(--pro-font-kop);font-weight:800;font-size:.85rem;
+  color:var(--pro-zand-diep);display:block;
+}
+.pro-stap--slot .pro-stap-nr{color:var(--pro-koraal)}
+
+/* ============================================================
+   10. Rekenhulp
+   ============================================================ */
+
+.pro-reken{
+  background:var(--pro-nacht);color:#fff;
+  border-radius:28px;position:relative;overflow:hidden;
+}
+.pro-reken .elementor-heading-title{color:#fff}
+.pro-reken .pro-accent{color:var(--pro-zand)}
+.pro-reken p{color:#A39B8B}
+.pro-reken-label{font-size:.85rem;font-weight:700;color:#948C7E;display:block;margin-bottom:10px}
+.pro-keuzes{display:flex;gap:9px;flex-wrap:wrap}
+.pro-keuze{
+  flex:1;min-width:84px;padding:14px 10px;
+  border:2px solid #2C2E39;background:#1C1F29;border-radius:var(--pro-r-rond);
+  color:#fff;font-family:var(--pro-font-kop);font-weight:700;font-size:.93rem;
+  cursor:pointer;
+  transition:border-color .16s,background-color .16s,color .16s,transform .16s;
+}
+.pro-keuze:hover{border-color:#454859;transform:translateY(-1px)}
+.pro-keuze[aria-pressed="true"]{background:var(--pro-zand);border-color:var(--pro-zand);color:#2A2415}
+.pro-keuze:focus-visible{outline:2px solid var(--pro-zand);outline-offset:3px}
+.pro-uitkomst{
+  background:#1C1F29;border:1px solid #2C2E39;
+  border-radius:var(--pro-r-groot);padding:30px;text-align:center;
+}
+.pro-uitkomst-label{font-size:.85rem;color:#948C7E}
+.pro-uitkomst-bedrag{
+  font-family:var(--pro-font-kop);font-weight:800;
+  font-size:clamp(2.5rem,5.6vw,3.5rem);letter-spacing:-.055em;
+  margin:6px 0;color:var(--pro-zand);
+}
+.pro-uitkomst-noot{font-size:.86rem;color:#948C7E}
+
+/* ============================================================
+   11. Overige vlakken
+   ============================================================ */
+
+.pro-vlak-zand{background:var(--pro-zand-zacht)}
+.pro-vlak-wit{background:#fff}
+.pro-vlak-nacht{background:linear-gradient(150deg,#22252F,var(--pro-nacht-diep));color:#fff}
+.pro-vlak-nacht .elementor-heading-title{color:#fff}
+.pro-vlak-nacht p{color:#B6AF9F}
+.pro-accent{color:var(--pro-zand)}
+
+.pro-korrel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.pro-korrel{position:relative}
+.pro-korrel>.e-con-inner,.pro-korrel>.elementor-container{position:relative;z-index:2}
+
+.pro-plaats{
+  background:#fff;border-radius:var(--pro-r);box-shadow:var(--pro-schaduw);
+  transition:transform .2s var(--pro-soepel),box-shadow .2s;
+}
+.pro-plaats:hover{transform:translateX(6px);box-shadow:var(--pro-schaduw-op)}
+
+.pro-faq .elementor-accordion-item{
+  background:#fff;border:0;border-radius:var(--pro-r);
+  box-shadow:var(--pro-schaduw);margin-bottom:10px;overflow:hidden;
+}
+.pro-faq .elementor-tab-title{
+  font-family:var(--pro-font-kop);font-weight:700;font-size:1.05rem;
+  padding:22px 26px;
+}
+.pro-faq .elementor-tab-content{
+  border:0;padding:0 26px 24px;color:var(--pro-grijs);font-size:.98rem;
+}
+
+.pro-review-quote{
+  font-family:var(--pro-font-kop);font-weight:800;font-size:2.2rem;
+  color:var(--pro-zand-diep);line-height:.7;display:block;
+}
+
+/* ============================================================
+   12. Mobiele actiebalk
+   ============================================================ */
+
+.pro-mobbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:95;
+  background:var(--pro-nacht-diep);border-top:1px solid #262A36;
+}
+.pro-mobbar a{
+  color:#C7C0B2;font-family:var(--pro-font-tekst);font-size:.71rem;font-weight:500;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;min-height:68px;
+}
+.pro-mobbar a:active{background:#1C1F29}
+.pro-mobbar .pro-wa{color:#4FD98A}
+@media(min-width:900px){.pro-mobbar{display:none!important}}
+@media(max-width:899px){body{padding-bottom:68px}}
+
+.pro-wa-zwevend{
+  position:fixed;right:28px;bottom:28px;z-index:88;
+  width:60px;height:60px;border-radius:50%;
+  background:var(--pro-groen);color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 12px 30px rgba(31,168,85,.45);transition:transform .2s;
+}
+.pro-wa-zwevend:hover{transform:scale(1.07)}
+@media(max-width:899px){.pro-wa-zwevend{display:none!important}}
+
+/* ============================================================
+   13. Toegankelijkheid
+   ============================================================ */
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+}
+:focus-visible{outline:3px solid var(--pro-zand-diep);outline-offset:3px}
+.pro-sr{
+  position:absolute;width:1px;height:1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;
+}
