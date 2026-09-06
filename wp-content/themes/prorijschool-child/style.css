@@ -3,7 +3,7 @@ Theme Name:   Prorijschool Child
 Theme URI:    https://prorijschool.nl
 Description:  Child theme voor Prorijschool. Designsysteem, componentklassen voor Elementor en een importeerknop voor templates uit Git.
 Author:       Prorijschool
-Version:      0.3.0
+Version:      0.4.0
 Template:     hello-elementor
 Text Domain:  prorijschool-child
 Tags:         elementor
@@ -12,7 +12,8 @@ Tags:         elementor
 /* ---------------------------------------------------------------
    Designtokens staan in assets/css/tokens.css
    Componentklassen staan in assets/css/componenten.css
-   Beide worden geladen via functions.php.
+   Header-uitzondering onder 361px in assets/css/header-320.css
+   Alle drie worden geladen via functions.php.
 
    Het versienummer hierboven is tegelijk de deploy-indicator:
    staat er in wp-admin een ander nummer dan in deze repo, dan is
