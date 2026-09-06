@@ -3,6 +3,10 @@
 !/.gitattributes
 !/.github/
 !/docs/
+!/design/
+/design/*
+!/design/header-responsive.css
+!/design/header-notes.md
 !/scripts/
 !/wordpress/
 /scripts/*
