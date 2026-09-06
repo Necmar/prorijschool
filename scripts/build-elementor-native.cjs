@@ -26,10 +26,10 @@ const invitation=shell('Uitnodigingsbalk','#F1EDE5',box(44,40),[
 
 const links=(label,items)=>container(label,{width:pct(24),width_mobile:pct(46),flex_gap:gap(0)},[
  heading(label+' — kop',label,13,'#FFFFFF',{header_size:'h3',...font(13,700,1.5),_margin:box(7,0,16),_margin_mobile:box(0,0,10)}),
- ...items.map(([text,url])=>textLink(text,text,url,'#BFCCD2',{typography_font_size_mobile:px(14)}))
+ ...items.map(([text,url])=>textLink(text,text,url,'#BFCCD2',{typography_font_size_mobile:px(14),...(['Pakketten & tarieven','Veelgestelde vragen'].includes(text)?{align:'justify',content_align:'start'}:{})}))
 ]);
 const footer=shell('Footer','#162C3B',box(58,40,24),[
- container('Footer — kolommen',{flex_direction:'row',flex_wrap:'wrap',flex_justify_content:'space-between',flex_gap:gap(28),padding:box(0,0,48),padding_mobile:box(0,0,30)},[
+ container('Footer — kolommen',{flex_direction:'row',flex_direction_mobile:'row',flex_wrap:'wrap',flex_justify_content:'space-between',flex_gap:gap(28),flex_gap_mobile:gap(12),padding:box(0,0,48),padding_mobile:box(0,0,30)},[
   container('Footer — merk',{width:pct(40),width_mobile:pct(100),flex_gap:gap(18)},[
    heading('Merknaam','Prorijschool.',28,'#FFFFFF',{link:{url:'/'},...font(28,700,1.3),typography_letter_spacing:px(-1)}),
    heading('Merk — toelichting','Leren rijden met aandacht voor jou. Stap voor stap, op jouw tempo en met vertrouwen de weg op.',15,'#BFCCD2',{...font(15,400,1.85),_element_width:'initial',_element_custom_width:px(295),_element_custom_width_mobile:pct(100)})

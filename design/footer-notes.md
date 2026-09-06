@@ -12,6 +12,12 @@
 
 ## Linkstatus
 
+## Opmaakherstel na native conversie
+
+Verouderde footerregels in Customizer > Extra CSS zijn verwijderd. De regel voor `.elementor-36 .e-con-inner` overschreef de native verticale padding met `0 !important`. De lege bovenste container is verwijderd. De mobiele kolommen gebruiken expliciet rijrichting met 12px tussenruimte; dit voorkomt stapelen op 320px. De oorspronkelijke controle op overflow alleen was onvoldoende. Screenshots op 320, 390, 768 en 1440px zijn nu visueel beoordeeld op witruimte en kolomindeling. De header gebruikt nog de bestaande Customizer-CSS; de eerdere claim dat alle opmaak via native instellingen liep was te ruim.
+
+## Linkbestemmingen
+
 De proefles- en informatielinks sluiten aan op de bestaande headerbestemmingen: `/#aanvraag`, `/#opleidingen`, `/#pakketten`, `/#theorie` en `/#vragen`. De homepage bevat deze secties nog niet. Deze links zijn dus voorbereid; een werkende aanvraagroute is geen onderdeel van deze footeroplevering. Er zijn geen contactgegevens, juridische pagina's of werkende CRM-functies verzonnen.
 
 ## Verificatie
