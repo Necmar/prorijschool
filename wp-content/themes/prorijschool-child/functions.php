@@ -13,7 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PRORIJSCHOOL_VERSIE', '0.2.0' );
+define( 'PRORIJSCHOOL_VERSIE', '0.3.0' );
+
+/**
+ * Templates importeren vanuit het thema.
+ * Te vinden onder Gereedschap > Prorijschool templates.
+ */
+require_once get_stylesheet_directory() . '/inc/template-import.php';
 
 /**
  * Stylesheets laden. Volgorde is bewust: tokens, componenten, child.
