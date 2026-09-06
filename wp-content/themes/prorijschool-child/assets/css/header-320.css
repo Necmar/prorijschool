@@ -1,0 +1,17 @@
+/* ============================================================
+   320px header-uitzondering
+   ============================================================
+
+   Op zeer smalle schermen past 'Proefles boeken' niet naast het
+   logo en de hamburger. Onder 361px tonen we de korte variant.
+   Elementor kent geen breekpunt onder 767px, vandaar dat dit hier
+   staat en niet in de editor.
+
+   Hoort bij de header-template (elementor_library id 23):
+   element s-header-cta en s-header-cta-kort.
+   ============================================================ */
+
+@media (max-width: 360px){
+  .elementor .s-header-cta{display:none !important}
+  .elementor .s-header-cta-kort{display:inline-block !important}
+}
