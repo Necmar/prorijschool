@@ -1,22 +1,21 @@
 # Footer — Prorijschool
 
-## Live implementatie
+## Ontwerp, 7 september 2026
 
-- Elementor footertemplate: `Footer – Prorijschool` (template ID 36).
-- Weergavevoorwaarde: gehele site.
-- Taalkeuze staat bewust niet meer in de header; de footer is voorbereid als vaste plek voor NL/EN/TR.
-- De footer gebruikt de bestaande hoofdnavigatie en verwijst naar de bestaande ankers `#opleidingen`, `#pakketten`, `#theorie`, `#regio` en `#vragen`.
-- Regiovermelding: Badhoevedorp, Hoofddorp en Vijfhuizen.
+- Live Elementor-template `Footer – Prorijschool`, ID 36, voor de gehele site.
+- Nieuwe HTML-widget met eigen CSS; bron en opmaak staan samen in `design/footer.html`, uit de gepubliceerde widget overgenomen.
+- Warme uitnodigingsbalk met proeflesknop, gevolgd door een donkerblauw merkblok en twee duidelijk benoemde navigatiegroepen.
+- Plaatsnamen, regiolink en niet-ingestelde sociale iconen verwijderd.
+- Taalkeuze blijft voorlopig afwezig.
+- Desktop: drie kolommen. Mobiel: merkblok over de volledige breedte, twee navigatiekolommen, proeflesknop over de volledige breedte.
+- Copyright en werkende terug-naar-boven-link onder een enkele scheidingslijn.
 
-## Styling
+## Linkstatus
 
-De live styling staat in WordPress Customizer → Extra CSS en is gescopeerd op `.elementor-36.elementor-location-footer`.
+De proefles- en informatielinks sluiten aan op de bestaande headerbestemmingen: `/#aanvraag`, `/#opleidingen`, `/#pakketten`, `/#theorie` en `/#vragen`. De homepage bevat deze secties nog niet. Deze links zijn dus voorbereid; een werkende aanvraagroute is geen onderdeel van deze footeroplevering. Er zijn geen contactgegevens, juridische pagina's of werkende CRM-functies verzonnen.
 
-- Donkerblauwe achtergrond (`#162c3b`) met lichte tekst.
-- Desktop: navigatie en regio naast elkaar; copyright en sociale links op een gescheiden onderste rij.
-- Mobiel: één kolom, verticale navigatie en geen horizontale overflow.
-- Focus states gebruiken een contrasterende warme accentkleur (`#f2a35b`).
+## Verificatie
 
-## Controle
+De live homepage zonder ingelogde WordPress-sessie gecontroleerd met Chromium op 320, 390, 600, 768, 1024 en 1440 pixels breed. Op alle breedtes: geen horizontale overflow, geen plaatsnamen en een CTA van minimaal 55px hoog. Terug naar boven werkt. Screenshots op 320, 768 en 1440 pixels visueel beoordeeld; resultaten en screenshots staan lokaal onder `artifacts/footer-*`.
 
-De gepubliceerde homepage is na publicatie opnieuw geladen. De footer is zichtbaar, bevat de navigatielinks, regiotekst en copyrightregel. Desktop is visueel gecontroleerd; de mobiele media-query is vastgelegd op maximaal 767px.
+De eerdere verklaring dat de oorspronkelijke footer op 390px getest was, was niet onderbouwd: toen was de Customizer-interface gemeten. De huidige controles meten daadwerkelijk de gepubliceerde homepage en footer.
