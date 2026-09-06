@@ -1,0 +1,197 @@
+{
+  "version": "0.4",
+  "title": "Prorijschool - 01 Hero met proeflesformulier",
+  "type": "container",
+  "content": [
+    {
+      "id": "hero001",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "container_type": "flex",
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "flex_gap": { "unit": "px", "size": 56, "column": "56", "row": "44" },
+        "content_width": "boxed",
+        "boxed_width": { "unit": "px", "size": 1220 },
+        "padding": { "unit": "px", "top": "88", "right": "24", "bottom": "104", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "48", "right": "20", "bottom": "56", "left": "20", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#1D2136",
+        "background_image": {
+          "url": "https://prorijschool.necmardemo.nl/wp-content/themes/prorijschool-child/assets/img/hero-polderweg.svg",
+          "id": "",
+          "source": "url"
+        },
+        "background_position": "center center",
+        "background_repeat": "no-repeat",
+        "background_size": "cover",
+        "_css_classes": "pro-hero pro-korrel"
+      },
+      "elements": [
+        {
+          "id": "hero010",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "container_type": "flex",
+            "flex_direction": "column",
+            "content_width": "full",
+            "width": { "unit": "%", "size": 55 },
+            "width_mobile": { "unit": "%", "size": 100 }
+          },
+          "elements": [
+            {
+              "id": "hero011",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "<span class=\"pro-wit\">Over drie maanden</span><br>rij jij zelf.",
+                "header_size": "h1",
+                "_css_classes": "pro-hero-titel"
+              },
+              "elements": []
+            },
+            {
+              "id": "hero012",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Rijles in Badhoevedorp, Hoofddorp en Vijfhuizen. Handgeschakeld of automaat, en les in je eigen taal.</p>",
+                "text_color": "#DCD5C6",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 20 },
+                "typography_font_size_mobile": { "unit": "px", "size": 17 }
+              },
+              "elements": []
+            },
+            {
+              "id": "hero020",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "container_type": "flex",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "content_width": "full",
+                "margin": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "padding": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "_css_classes": "pro-bewijs"
+              },
+              "elements": [
+                {
+                  "id": "hero021",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": { "container_type": "flex", "flex_direction": "column", "content_width": "full", "_css_classes": "pro-bw" },
+                  "elements": [
+                    { "id": "hero022", "elType": "widget", "widgetType": "heading", "settings": { "title": "4,8", "header_size": "div", "_css_classes": "pro-bw-cijfer" }, "elements": [] },
+                    { "id": "hero023", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p>uit 127 reviews</p>", "_css_classes": "pro-bw-label" }, "elements": [] }
+                  ]
+                },
+                {
+                  "id": "hero024",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": { "container_type": "flex", "flex_direction": "column", "content_width": "full", "_css_classes": "pro-bw" },
+                  "elements": [
+                    { "id": "hero025", "elType": "widget", "widgetType": "heading", "settings": { "title": "71%", "header_size": "div", "_css_classes": "pro-bw-cijfer" }, "elements": [] },
+                    { "id": "hero026", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p>slaagt in \u00e9\u00e9n keer</p>", "_css_classes": "pro-bw-label" }, "elements": [] }
+                  ]
+                },
+                {
+                  "id": "hero027",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": { "container_type": "flex", "flex_direction": "column", "content_width": "full", "_css_classes": "pro-bw" },
+                  "elements": [
+                    { "id": "hero028", "elType": "widget", "widgetType": "heading", "settings": { "title": "60\u2013120", "header_size": "div", "_css_classes": "pro-bw-cijfer" }, "elements": [] },
+                    { "id": "hero029", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p>minuten per les</p>", "_css_classes": "pro-bw-label" }, "elements": [] }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hero030",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "container_type": "flex",
+            "flex_direction": "column",
+            "content_width": "full",
+            "width": { "unit": "%", "size": 45 },
+            "width_mobile": { "unit": "%", "size": 100 },
+            "_css_classes": "pro-formulier"
+          },
+          "elements": [
+            {
+              "id": "hero031",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": { "title": "Plan je proefles", "header_size": "h2", "title_color": "#14161F" },
+              "elements": []
+            },
+            {
+              "id": "hero032",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": { "editor": "<p>We bellen je binnen \u00e9\u00e9n werkdag terug met een voorstel.</p>", "text_color": "#6A6459" },
+              "elements": []
+            },
+            {
+              "id": "hero033",
+              "elType": "widget",
+              "widgetType": "form",
+              "settings": {
+                "form_name": "Proefles aanvragen",
+                "form_fields": [
+                  { "_id": "naam", "field_type": "text", "field_label": "Je naam", "placeholder": "Voornaam en achternaam", "required": "true", "width": "100" },
+                  { "_id": "telefoon", "field_type": "tel", "field_label": "Telefoonnummer", "placeholder": "06 12 34 56 78", "required": "true", "width": "100" },
+                  { "_id": "plaats", "field_type": "select", "field_label": "Waar woon je?", "field_options": "Badhoevedorp\nHoofddorp\nVijfhuizen\nAnders, in de buurt", "width": "100" }
+                ],
+                "button_text": "Bel mij terug",
+                "button_size": "md",
+                "button_width": "100",
+                "submit_actions": [ "email" ],
+                "email_to": "info@prorijschool.nl",
+                "email_subject": "Nieuwe proeflesaanvraag via de website",
+                "email_content": "[all-fields]",
+                "email_from_name": "Prorijschool website",
+                "success_message": "Bedankt. We bellen je binnen \u00e9\u00e9n werkdag terug.",
+                "error_message": "Er ging iets mis. Bel ons gerust op 020 000 0000."
+              },
+              "elements": []
+            },
+            {
+              "id": "hero034",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align:center\">Gratis en vrijblijvend. Geen automatische incasso.</p>",
+                "text_color": "#948C7E",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 13 }
+              },
+              "elements": []
+            },
+            {
+              "id": "hero035",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Stuur een WhatsApp",
+                "link": { "url": "https://wa.me/31600000000", "is_external": "on", "nofollow": "" },
+                "align": "justify",
+                "_css_classes": "pro-btn pro-btn--wa pro-btn--vol"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": []
+}
