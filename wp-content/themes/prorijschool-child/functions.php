@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PRORIJSCHOOL_VERSIE', '0.3.0' );
+define( 'PRORIJSCHOOL_VERSIE', '0.4.0' );
 
 /**
  * Templates importeren vanuit het thema.
@@ -22,11 +22,15 @@ define( 'PRORIJSCHOOL_VERSIE', '0.3.0' );
 require_once get_stylesheet_directory() . '/inc/template-import.php';
 
 /**
- * Stylesheets laden. Volgorde is bewust: tokens, componenten, child.
+ * Stylesheets laden. Volgorde is bewust: tokens, componenten, uitzonderingen, child.
  */
 function prorijschool_styles() {
 	$dir = get_stylesheet_directory_uri();
 	$pad = get_stylesheet_directory();
+
+	$ver = function ( $bestand ) use ( $pad ) {
+		return file_exists( $pad . $bestand ) ? filemtime( $pad . $bestand ) : PRORIJSCHOOL_VERSIE;
+	};
 
 	wp_enqueue_style(
 		'hello-elementor',
@@ -35,26 +39,10 @@ function prorijschool_styles() {
 		wp_get_theme( 'hello-elementor' )->get( 'Version' )
 	);
 
-	wp_enqueue_style(
-		'prorijschool-tokens',
-		$dir . '/assets/css/tokens.css',
-		array( 'hello-elementor' ),
-		file_exists( $pad . '/assets/css/tokens.css' ) ? filemtime( $pad . '/assets/css/tokens.css' ) : PRORIJSCHOOL_VERSIE
-	);
-
-	wp_enqueue_style(
-		'prorijschool-componenten',
-		$dir . '/assets/css/componenten.css',
-		array( 'prorijschool-tokens' ),
-		file_exists( $pad . '/assets/css/componenten.css' ) ? filemtime( $pad . '/assets/css/componenten.css' ) : PRORIJSCHOOL_VERSIE
-	);
-
-	wp_enqueue_style(
-		'prorijschool-child',
-		$dir . '/style.css',
-		array( 'prorijschool-componenten' ),
-		PRORIJSCHOOL_VERSIE
-	);
+	wp_enqueue_style( 'prorijschool-tokens', $dir . '/assets/css/tokens.css', array( 'hello-elementor' ), $ver( '/assets/css/tokens.css' ) );
+	wp_enqueue_style( 'prorijschool-componenten', $dir . '/assets/css/componenten.css', array( 'prorijschool-tokens' ), $ver( '/assets/css/componenten.css' ) );
+	wp_enqueue_style( 'prorijschool-header-320', $dir . '/assets/css/header-320.css', array( 'prorijschool-componenten' ), $ver( '/assets/css/header-320.css' ) );
+	wp_enqueue_style( 'prorijschool-child', $dir . '/style.css', array( 'prorijschool-componenten' ), PRORIJSCHOOL_VERSIE );
 }
 add_action( 'wp_enqueue_scripts', 'prorijschool_styles', 20 );
 
