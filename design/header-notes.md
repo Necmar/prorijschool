@@ -17,3 +17,5 @@ of proeflesaanvraag. Die bestemmingen zijn met deze stijlwijziging niet gebouwd.
 
 Herstel: verwijder dit afgebakende CSS-blok in Extra CSS; bestaande Elementor-
 elementen en de oorspronkelijke stijlen zijn intact gebleven.
+
+Aanpassing: taalwisselaar verborgen t/m 1100px; footer volgt later. Gecontroleerd op 320, 390, 768, 1024 en 1256px zonder overloop.
