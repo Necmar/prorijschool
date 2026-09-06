@@ -6,7 +6,8 @@ Prorijschool Child-thema en Elementor-header 23. De CSS is beperkt tot deze head
 Geen automatische deployment: deze repository loopt nog niet gelijk met de online installatie.
 
 Wijziging: lichte achtergrond, donkerblauwe tekst, contrasterende proeflesknop,
-responsive menubediening, taalkeuze en inloggen op tweede regel onder 1101px.
+responsive menubediening en inloggen op tweede regel onder 1101px. De taalwisselaar
+is als Elementor-knoppen verwijderd; taalkeuze komt later in de footer.
 
 Gecontroleerd in browser: 320, 390, 768, 1024, 1101 en 1440px zonder horizontale
 overloop. Mobiel menu opent/sluit; Enter sluit het menu via de gefocuste toggle.
