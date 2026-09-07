@@ -3027,7 +3027,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "_title": "Losse lessen, een rittenkaart of een compleet",
+                "_title": "Tijdelijke voorbeeldprijzen voor de demo. Def",
                 "_margin": {
                   "unit": "px",
                   "top": "0",
@@ -3036,7 +3036,7 @@
                   "left": "0",
                   "isLinked": false
                 },
-                "title": "Losse lessen, een rittenkaart of een compleet pakket. Vraag een prijsvoorstel met een duidelijke uitleg van alle onderdelen.",
+                "title": "Tijdelijke voorbeeldprijzen voor de demo. Definitieve tarieven en inhoud volgen vóór livegang.",
                 "header_size": "p",
                 "title_color": "#52616B",
                 "typography_typography": "custom",
@@ -3294,7 +3294,7 @@
                   "elType": "widget",
                   "widgetType": "heading",
                   "settings": {
-                    "_title": "Keuze uit 60, 90 of 120 minuten",
+                    "_title": "Voorbeeldtarief: € 52,50 per 60 minuten",
                     "_margin": {
                       "unit": "px",
                       "top": "0",
@@ -3303,7 +3303,7 @@
                       "left": "0",
                       "isLinked": false
                     },
-                    "title": "Keuze uit 60, 90 of 120 minuten",
+                    "title": "Voorbeeldtarief: € 52,50 per 60 minuten",
                     "header_size": "p",
                     "title_color": "#52616B",
                     "typography_typography": "custom",
@@ -3602,7 +3602,7 @@
                   "elType": "widget",
                   "widgetType": "heading",
                   "settings": {
-                    "_title": "Lesomvang en tarief vooraf bespreken",
+                    "_title": "Voorbeeld: 10 lessen van 60 minuten — € 500",
                     "_margin": {
                       "unit": "px",
                       "top": "0",
@@ -3611,7 +3611,7 @@
                       "left": "0",
                       "isLinked": false
                     },
-                    "title": "Lesomvang en tarief vooraf bespreken",
+                    "title": "Voorbeeld: 10 lessen van 60 minuten — € 500",
                     "header_size": "p",
                     "title_color": "#52616B",
                     "typography_typography": "custom",
@@ -3910,7 +3910,7 @@
                   "elType": "widget",
                   "widgetType": "heading",
                   "settings": {
-                    "_title": "Lessen, examens en theorie duidelijk gespecif",
+                    "_title": "Voorbeeldpakket: 30 lessen + praktijkexamen —",
                     "_margin": {
                       "unit": "px",
                       "top": "0",
@@ -3919,7 +3919,7 @@
                       "left": "0",
                       "isLinked": false
                     },
-                    "title": "Lessen, examens en theorie duidelijk gespecificeerd",
+                    "title": "Voorbeeldpakket: 30 lessen + praktijkexamen — € 1.795",
                     "header_size": "p",
                     "title_color": "#52616B",
                     "typography_typography": "custom",
@@ -6294,7 +6294,7 @@
                   "elType": "widget",
                   "widgetType": "heading",
                   "settings": {
-                    "_title": "Vraag een prijsvoorstel aan. Je krijgt vooraf",
+                    "_title": "Voor deze demo gebruiken we voorbeeldprijzen:",
                     "_margin": {
                       "unit": "px",
                       "top": "0",
@@ -6303,7 +6303,7 @@
                       "left": "0",
                       "isLinked": false
                     },
-                    "title": "Vraag een prijsvoorstel aan. Je krijgt vooraf uitleg over het tarief, de lesomvang en eventuele inbegrepen onderdelen.",
+                    "title": "Voor deze demo gebruiken we voorbeeldprijzen: € 52,50 per losse les, € 500 voor 10 lessen en € 1.795 voor een pakket met 30 lessen en praktijkexamen. Definitieve tarieven volgen vóór livegang.",
                     "header_size": "p",
                     "title_color": "#52616B",
                     "typography_typography": "custom",
@@ -6830,7 +6830,7 @@
                   "elType": "widget",
                   "widgetType": "heading",
                   "settings": {
-                    "_title": "Je aanvraag is nog geen definitieve boeking.",
+                    "_title": "Je aanvraag is nog geen definitieve boeking. ",
                     "_margin": {
                       "unit": "px",
                       "top": "0",
@@ -6839,7 +6839,7 @@
                       "left": "0",
                       "isLinked": false
                     },
-                    "title": "Je aanvraag is nog geen definitieve boeking.",
+                    "title": "Je aanvraag is nog geen definitieve boeking. Demo-contact: 06 12 34 56 78 · demo@prorijschool.test",
                     "header_size": "p",
                     "title_color": "#52616B",
                     "typography_typography": "custom",
