@@ -1,0 +1,1529 @@
+{
+  "version": "0.4",
+  "title": "Prorijschool — Contact met Prorijschool",
+  "type": "page",
+  "page_settings": {
+    "hide_title": "yes",
+    "template": "elementor_header_footer"
+  },
+  "content": [
+    {
+      "id": "c1002e1",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "intro",
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "unit": "px",
+          "size": 20,
+          "column": "20",
+          "row": "20",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "88",
+          "right": "52",
+          "bottom": "88",
+          "left": "52",
+          "isLinked": false
+        },
+        "css_id": "intro",
+        "background_background": "gradient",
+        "background_color": "#1D2136",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "72",
+          "right": "32",
+          "bottom": "72",
+          "left": "32",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "20",
+          "bottom": "56",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_color_b": "#7C5552",
+        "background_gradient_type": "linear",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 118
+        }
+      },
+      "elements": [
+        {
+          "id": "c1002e0",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_title": "Hero",
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_gap": {
+              "unit": "px",
+              "size": 24,
+              "column": "24",
+              "row": "24",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "flex_direction_mobile": "column",
+            "flex_wrap": "nowrap",
+            "flex_align_items": "center",
+            "flex_justify_content": "space-between"
+          },
+          "elements": [
+            {
+              "id": "c1002db",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "_title": "Hero inhoud",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 20,
+                  "column": "20",
+                  "row": "20",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "width": {
+                  "unit": "%",
+                  "size": 62,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                }
+              },
+              "elements": [
+                {
+                  "id": "c1002d5",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "WE DENKEN MET JE MEE",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "WE DENKEN MET JE MEE",
+                    "header_size": "p",
+                    "title_color": "#D2A94F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.4
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.5,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002d6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "Contact met Prorijschool",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "Contact met Prorijschool",
+                    "header_size": "h1",
+                    "title_color": "#E9C87F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 66,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.05
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 44,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -1.4,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002d7",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "Stel je vraag over lessen, pakketten, theorie of beschi",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "Stel je vraag over lessen, pakketten, theorie of beschikbaarheid.",
+                    "header_size": "p",
+                    "title_color": "#DCD5C6",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Public Sans",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002da",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "Acties",
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_gap": {
+                      "unit": "px",
+                      "size": 24,
+                      "column": "24",
+                      "row": "24",
+                      "isLinked": true
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "flex_direction_mobile": "column",
+                    "flex_wrap": "wrap"
+                  },
+                  "elements": [
+                    {
+                      "id": "c1002d8",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "_title": "Proefles aanvragen",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "text": "Proefles aanvragen",
+                        "link": {
+                          "url": "/proefles/"
+                        },
+                        "align": "left",
+                        "align_mobile": "justify",
+                        "button_text_color": "#FFFFFF",
+                        "background_color": "#FF5A36",
+                        "button_background_hover_color": "#E8451F",
+                        "hover_color": "#FFFFFF",
+                        "border_border": "solid",
+                        "border_color": "#FF5A36",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "100",
+                          "right": "100",
+                          "bottom": "100",
+                          "left": "100",
+                          "isLinked": false
+                        },
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "17",
+                          "right": "28",
+                          "bottom": "17",
+                          "left": "28",
+                          "isLinked": false
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.2
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c1002d9",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "_title": "Bekijk pakketten",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "text": "Bekijk pakketten",
+                        "link": {
+                          "url": "/pakketten/"
+                        },
+                        "align": "left",
+                        "align_mobile": "justify",
+                        "button_text_color": "#14161F",
+                        "background_color": "#FFFFFF",
+                        "button_background_hover_color": "#D2A94F",
+                        "hover_color": "#FFFFFF",
+                        "border_border": "solid",
+                        "border_color": "#E9E0CF",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "2",
+                          "right": "2",
+                          "bottom": "2",
+                          "left": "2",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "100",
+                          "right": "100",
+                          "bottom": "100",
+                          "left": "100",
+                          "isLinked": false
+                        },
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "17",
+                          "right": "28",
+                          "bottom": "17",
+                          "left": "28",
+                          "isLinked": false
+                        },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.2
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "c1002df",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "_title": "Hero blikvanger",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 20,
+                  "column": "20",
+                  "row": "20",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "30",
+                  "bottom": "30",
+                  "left": "30",
+                  "isLinked": false
+                },
+                "width": {
+                  "unit": "%",
+                  "size": 32,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "background_background": "classic",
+                "background_color": "#1C1F29",
+                "border_border": "solid",
+                "border_color": "#323644",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": false
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "c1002dc",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "PERSOONLIJK LESPLAN",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "PERSOONLIJK LESPLAN",
+                    "header_size": "p",
+                    "title_color": "#E9C87F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.4
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.5,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002dd",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "Rust. Ritme. Resultaat.",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "Rust. Ritme. Resultaat.",
+                    "header_size": "h2",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.05
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -1.4,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002de",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "Lessen van 60, 90 of 120 minuten. Handgeschakeld of aut",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "Lessen van 60, 90 of 120 minuten. Handgeschakeld of automaat. Nederlands, Engels of Turks als voorkeur.",
+                    "header_size": "p",
+                    "title_color": "#BDB6A7",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Public Sans",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1002eb",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "formulier",
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "unit": "px",
+          "size": 20,
+          "column": "20",
+          "row": "20",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "88",
+          "right": "52",
+          "bottom": "88",
+          "left": "52",
+          "isLinked": false
+        },
+        "css_id": "formulier",
+        "background_background": "classic",
+        "background_color": "#F7EBD2",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "72",
+          "right": "32",
+          "bottom": "72",
+          "left": "32",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "20",
+          "bottom": "56",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "c1002ea",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_title": "Formulier en uitleg",
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_gap": {
+              "unit": "px",
+              "size": 24,
+              "column": "24",
+              "row": "24",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "flex_direction_mobile": "column",
+            "flex_wrap": "nowrap",
+            "flex_align_items": "flex-start",
+            "flex_justify_content": "space-between"
+          },
+          "elements": [
+            {
+              "id": "c1002e3",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "_title": "Formulier",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 20,
+                  "column": "20",
+                  "row": "20",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "30",
+                  "bottom": "30",
+                  "left": "30",
+                  "isLinked": false
+                },
+                "width": {
+                  "unit": "%",
+                  "size": 58,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": false
+                },
+                "border_border": "solid",
+                "border_color": "#E9E0CF",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "c1002e2",
+                  "elType": "widget",
+                  "widgetType": "form",
+                  "settings": {
+                    "_title": "Contact met Prorijschool",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "form_name": "Contact met Prorijschool",
+                    "form_fields": [
+                      {
+                        "custom_id": "naam",
+                        "field_label": "Naam",
+                        "field_type": "text",
+                        "required": "true",
+                        "width": "50",
+                        "field_options": "",
+                        "placeholder": "Naam"
+                      },
+                      {
+                        "custom_id": "email",
+                        "field_label": "E-mailadres",
+                        "field_type": "email",
+                        "required": "true",
+                        "width": "50",
+                        "field_options": "",
+                        "placeholder": "E-mailadres"
+                      },
+                      {
+                        "custom_id": "telefoon",
+                        "field_label": "Telefoonnummer",
+                        "field_type": "tel",
+                        "required": "",
+                        "width": "50",
+                        "field_options": "",
+                        "placeholder": "Telefoonnummer"
+                      },
+                      {
+                        "custom_id": "onderwerp",
+                        "field_label": "Onderwerp",
+                        "field_type": "select",
+                        "required": "true",
+                        "width": "50",
+                        "field_options": "Proefles\nPakket of prijs\nTheorie\nInschrijving\nAnders",
+                        "placeholder": "Onderwerp"
+                      },
+                      {
+                        "custom_id": "bericht",
+                        "field_label": "Bericht",
+                        "field_type": "textarea",
+                        "required": "true",
+                        "width": "100",
+                        "field_options": "",
+                        "placeholder": "Bericht"
+                      },
+                      {
+                        "custom_id": "privacy",
+                        "field_label": "Ik ga akkoord met de privacyverklaring.",
+                        "field_type": "acceptance",
+                        "required": "true",
+                        "width": "100",
+                        "field_options": "",
+                        "placeholder": "Ik ga akkoord met de privacyverklaring."
+                      },
+                      {
+                        "custom_id": "website",
+                        "field_label": "Website",
+                        "field_type": "honeypot",
+                        "required": "",
+                        "width": "100",
+                        "field_options": "",
+                        "placeholder": "Website"
+                      }
+                    ],
+                    "show_labels": "yes",
+                    "input_size": "md",
+                    "button_text": "Bericht versturen",
+                    "button_width": "100",
+                    "submit_actions": [
+                      "save-to-database"
+                    ],
+                    "custom_messages": "yes",
+                    "success_message": "Bedankt! Je aanvraag is ontvangen. We nemen persoonlijk contact met je op.",
+                    "form_id": "contact-met-prorijschool",
+                    "field_text_color": "#14161F",
+                    "field_background_color": "#FFFFFF",
+                    "field_border_color": "#E9E0CF",
+                    "field_border_width": {
+                      "unit": "px",
+                      "top": "2",
+                      "right": "2",
+                      "bottom": "2",
+                      "left": "2",
+                      "isLinked": false
+                    },
+                    "field_border_radius": {
+                      "unit": "px",
+                      "top": "14",
+                      "right": "14",
+                      "bottom": "14",
+                      "left": "14",
+                      "isLinked": false
+                    },
+                    "field_typography_typography": "custom",
+                    "field_typography_font_family": "Public Sans",
+                    "field_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "label_color": "#14161F",
+                    "label_typography_typography": "custom",
+                    "label_typography_font_family": "Public Sans",
+                    "label_typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "label_typography_font_weight": "700",
+                    "row_gap": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "button_background_color": "#FF5A36",
+                    "button_text_color": "#FFFFFF",
+                    "button_border_radius": {
+                      "unit": "px",
+                      "top": "100",
+                      "right": "100",
+                      "bottom": "100",
+                      "left": "100",
+                      "isLinked": false
+                    },
+                    "button_text_padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "24",
+                      "bottom": "18",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "button_typography_typography": "custom",
+                    "button_typography_font_family": "Sora",
+                    "button_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "button_typography_font_weight": "700"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "c1002e9",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "_title": "Naast formulier",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 20,
+                  "column": "20",
+                  "row": "20",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "30",
+                  "bottom": "30",
+                  "left": "30",
+                  "isLinked": false
+                },
+                "width": {
+                  "unit": "%",
+                  "size": 35,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 48.8,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_color": "#E9E0CF",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": false
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "c1002e4",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "Tijdelijke contactgegevens",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "Tijdelijke contactgegevens",
+                    "header_size": "h3",
+                    "title_color": "#14161F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 28,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.05
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 28,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 24,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -1.4,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002e5",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "✓  Telefoon: 020 – 000 00 00",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "✓  Telefoon: 020 – 000 00 00",
+                    "header_size": "p",
+                    "title_color": "#14161F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Public Sans",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002e6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "✓  E-mail: info@prorijschool.nl",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "✓  E-mail: info@prorijschool.nl",
+                    "header_size": "p",
+                    "title_color": "#14161F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Public Sans",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002e7",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "_title": "✓  WhatsApp: 06 – 00 00 00 00",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "title": "✓  WhatsApp: 06 – 00 00 00 00",
+                    "header_size": "p",
+                    "title_color": "#14161F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Public Sans",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002e8",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "_title": "WhatsApp ons",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "text": "WhatsApp ons",
+                    "link": {
+                      "url": "https://wa.me/31600000000"
+                    },
+                    "align": "left",
+                    "align_mobile": "justify",
+                    "button_text_color": "#FFFFFF",
+                    "background_color": "#1FA855",
+                    "button_background_hover_color": "#17853F",
+                    "hover_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_color": "#1FA855",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "100",
+                      "right": "100",
+                      "bottom": "100",
+                      "left": "100",
+                      "isLinked": false
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "17",
+                      "right": "28",
+                      "bottom": "17",
+                      "left": "28",
+                      "isLinked": false
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1002f3",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "volgende-stap",
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "unit": "px",
+          "size": 20,
+          "column": "20",
+          "row": "20",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "88",
+          "right": "52",
+          "bottom": "88",
+          "left": "52",
+          "isLinked": false
+        },
+        "css_id": "volgende-stap",
+        "background_background": "classic",
+        "background_color": "#0C0E15",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "72",
+          "right": "32",
+          "bottom": "72",
+          "left": "32",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "20",
+          "bottom": "56",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "c1002f2",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_title": "Slot inhoud",
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 20,
+              "column": "20",
+              "row": "20",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "c1002ec",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "_title": "JOUW VOLGENDE STAP",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "title": "JOUW VOLGENDE STAP",
+                "header_size": "p",
+                "title_color": "#E9C87F",
+                "typography_typography": "custom",
+                "typography_font_family": "Sora",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.4
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "c1002ed",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "_title": "We helpen je graag verder",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "title": "We helpen je graag verder",
+                "header_size": "h2",
+                "title_color": "#E9C87F",
+                "typography_typography": "custom",
+                "typography_font_family": "Sora",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.05
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 40,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 34,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -1.4,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "c1002ee",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "_title": "Na je aanvraag nemen we contact op om alles rustig door",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "title": "Na je aanvraag nemen we contact op om alles rustig door te spreken.",
+                "header_size": "p",
+                "title_color": "#DCD5C6",
+                "typography_typography": "custom",
+                "typography_font_family": "Public Sans",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.6
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "c1002f1",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "_title": "Acties",
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 24,
+                  "column": "24",
+                  "row": "24",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "flex_direction_mobile": "column",
+                "flex_wrap": "wrap"
+              },
+              "elements": [
+                {
+                  "id": "c1002ef",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "_title": "Plan mijn proefles",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "text": "Plan mijn proefles",
+                    "link": {
+                      "url": "/proefles/"
+                    },
+                    "align": "left",
+                    "align_mobile": "justify",
+                    "button_text_color": "#FFFFFF",
+                    "background_color": "#FF5A36",
+                    "button_background_hover_color": "#E8451F",
+                    "hover_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_color": "#FF5A36",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "100",
+                      "right": "100",
+                      "bottom": "100",
+                      "left": "100",
+                      "isLinked": false
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "17",
+                      "right": "28",
+                      "bottom": "17",
+                      "left": "28",
+                      "isLinked": false
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c1002f0",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "_title": "Schrijf mij in",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "text": "Schrijf mij in",
+                    "link": {
+                      "url": "/inschrijven/"
+                    },
+                    "align": "left",
+                    "align_mobile": "justify",
+                    "button_text_color": "#14161F",
+                    "background_color": "#FFFFFF",
+                    "button_background_hover_color": "#D2A94F",
+                    "hover_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_color": "#E9E0CF",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "2",
+                      "right": "2",
+                      "bottom": "2",
+                      "left": "2",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "100",
+                      "right": "100",
+                      "bottom": "100",
+                      "left": "100",
+                      "isLinked": false
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "17",
+                      "right": "28",
+                      "bottom": "17",
+                      "left": "28",
+                      "isLinked": false
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "manifestVersion": "1.0.0",
+  "pages": [
+    {
+      "slug": "autorijles",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "automaat-rijles",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "taxilessen",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "aanhangwagenrijlessen",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "theorie",
+      "sections": 5,
+      "elements": 74,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "online-theorie",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "theoriecursus",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "pakketten",
+      "sections": 5,
+      "elements": 84,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "proefles",
+      "sections": 3,
+      "elements": 31,
+      "h1": 1,
+      "forms": 1,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "inschrijven",
+      "sections": 3,
+      "elements": 31,
+      "h1": 1,
+      "forms": 1,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "over-prorijschool",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "contact",
+      "sections": 3,
+      "elements": 31,
+      "h1": 1,
+      "forms": 1,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "veelgestelde-vragen",
+      "sections": 3,
+      "elements": 51,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "blog",
+      "sections": 3,
+      "elements": 51,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "inloggen",
+      "sections": 3,
+      "elements": 35,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "rijschool-badhoevedorp",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "rijschool-hoofddorp",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "rijschool-vijfhuizen",
+      "sections": 5,
+      "elements": 72,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "privacyverklaring",
+      "sections": 3,
+      "elements": 38,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "algemene-voorwaarden",
+      "sections": 3,
+      "elements": 38,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    },
+    {
+      "slug": "cookiebeleid",
+      "sections": 3,
+      "elements": 38,
+      "h1": 1,
+      "forms": 0,
+      "htmlWidgets": 0
+    }
+  ],
+  "errors": []
+}

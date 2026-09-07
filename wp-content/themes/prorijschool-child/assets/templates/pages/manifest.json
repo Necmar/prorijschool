@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "pages": [
+    {
+      "slug": "autorijles",
+      "title": "Autorijles",
+      "template": "autorijles.json",
+      "description": "Persoonlijke autorijles met handgeschakelde auto in Badhoevedorp, Hoofddorp en Vijfhuizen.",
+      "menu_order": 10
+    },
+    {
+      "slug": "automaat-rijles",
+      "title": "Automaat rijles",
+      "template": "automaat-rijles.json",
+      "description": "Automaat rijles met rust, persoonlijke begeleiding en keuze uit verschillende lesduren.",
+      "menu_order": 11
+    },
+    {
+      "slug": "taxilessen",
+      "title": "Taxilessen",
+      "template": "taxilessen.json",
+      "description": "Praktijkgerichte taxilessen voor veilig, comfortabel en professioneel rijden.",
+      "menu_order": 12
+    },
+    {
+      "slug": "aanhangwagenrijlessen",
+      "title": "Aanhangwagenrijlessen",
+      "template": "aanhangwagenrijlessen.json",
+      "description": "Aanhangwagenrijles en voorbereiding op rijbewijs BE in de Haarlemmermeer.",
+      "menu_order": 13
+    },
+    {
+      "slug": "theorie",
+      "title": "Theorie voor je rijbewijs",
+      "template": "theorie.json",
+      "description": "Fysieke en toekomstige online theorie voor je autorijbewijs.",
+      "menu_order": 14
+    },
+    {
+      "slug": "online-theorie",
+      "title": "Online theorie",
+      "template": "online-theorie.json",
+      "description": "Online theorie bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 15
+    },
+    {
+      "slug": "theoriecursus",
+      "title": "Fysieke theoriecursus",
+      "template": "theoriecursus.json",
+      "description": "Fysieke theoriecursus bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 16
+    },
+    {
+      "slug": "pakketten",
+      "title": "Pakketten en prijzen",
+      "template": "pakketten.json",
+      "description": "Bekijk tijdelijke voorbeeldpakketten en transparante prijsopbouw van Prorijschool.",
+      "menu_order": 17
+    },
+    {
+      "slug": "proefles",
+      "title": "Proefles aanvragen",
+      "template": "proefles.json",
+      "description": "Vraag vrijblijvend een proefles aan bij Prorijschool.",
+      "menu_order": 18
+    },
+    {
+      "slug": "inschrijven",
+      "title": "Online inschrijven",
+      "template": "inschrijven.json",
+      "description": "Schrijf je online in voor rijles, automaat, taxi, aanhanger of theorie.",
+      "menu_order": 19
+    },
+    {
+      "slug": "over-prorijschool",
+      "title": "Over Prorijschool",
+      "template": "over-prorijschool.json",
+      "description": "Over Prorijschool bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 20
+    },
+    {
+      "slug": "contact",
+      "title": "Contact met Prorijschool",
+      "template": "contact.json",
+      "description": "Neem contact op met Prorijschool over lessen, pakketten, theorie en beschikbaarheid.",
+      "menu_order": 21
+    },
+    {
+      "slug": "veelgestelde-vragen",
+      "title": "Veelgestelde vragen",
+      "template": "veelgestelde-vragen.json",
+      "description": "Veelgestelde vragen bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 22
+    },
+    {
+      "slug": "blog",
+      "title": "Rijleskennis",
+      "template": "blog.json",
+      "description": "Rijleskennis bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 23
+    },
+    {
+      "slug": "inloggen",
+      "title": "Inloggen",
+      "template": "inloggen.json",
+      "description": "Inloggen bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 24
+    },
+    {
+      "slug": "rijschool-badhoevedorp",
+      "title": "Rijschool Badhoevedorp",
+      "template": "rijschool-badhoevedorp.json",
+      "description": "Rijschool Badhoevedorp bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 25
+    },
+    {
+      "slug": "rijschool-hoofddorp",
+      "title": "Rijschool Hoofddorp",
+      "template": "rijschool-hoofddorp.json",
+      "description": "Rijschool Hoofddorp bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 26
+    },
+    {
+      "slug": "rijschool-vijfhuizen",
+      "title": "Rijschool Vijfhuizen",
+      "template": "rijschool-vijfhuizen.json",
+      "description": "Rijschool Vijfhuizen bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 27
+    },
+    {
+      "slug": "privacyverklaring",
+      "title": "Privacyverklaring",
+      "template": "privacyverklaring.json",
+      "description": "Privacyverklaring bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 28
+    },
+    {
+      "slug": "algemene-voorwaarden",
+      "title": "Algemene voorwaarden",
+      "template": "algemene-voorwaarden.json",
+      "description": "Algemene voorwaarden bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 29
+    },
+    {
+      "slug": "cookiebeleid",
+      "title": "Cookiebeleid",
+      "template": "cookiebeleid.json",
+      "description": "Cookiebeleid bij Prorijschool. Persoonlijk, duidelijk en gericht op veilig zelfstandig rijden.",
+      "menu_order": 30
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 param()
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
-$themeRelative = 'wordpress/wp-content/themes/necmar-rijschool'
+$themeRelative = 'wp-content/themes/prorijschool-child'
 $themeRoot = Join-Path $projectRoot $themeRelative
 $releaseRoot = Join-Path $projectRoot 'artifacts'
 if (-not (Test-Path -LiteralPath (Join-Path $themeRoot 'style.css'))) { throw 'Thema ontbreekt.' }

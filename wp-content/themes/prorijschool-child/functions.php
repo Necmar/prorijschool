@@ -13,13 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PRORIJSCHOOL_VERSIE', '0.4.0' );
+define( 'PRORIJSCHOOL_VERSIE', '0.5.0' );
 
 /**
  * Templates importeren vanuit het thema.
  * Te vinden onder Gereedschap > Prorijschool templates.
  */
 require_once get_stylesheet_directory() . '/inc/template-import.php';
+require_once get_stylesheet_directory() . '/inc/site-setup.php';
 
 /**
  * Stylesheets laden. Volgorde is bewust: tokens, componenten, uitzonderingen, child.
@@ -97,6 +98,26 @@ function prorijschool_rekenhulp() {
 add_action( 'wp_enqueue_scripts', 'prorijschool_rekenhulp', 21 );
 
 /**
+ * De Atomic Button-elementen op het bestaande HomepageV2-concept bewaren hun
+ * URL wel in Elementor, maar de huidige Elementor 4-preview rendert ze soms als
+ * button. Deze kleine, paginaspecifieke reparatie houdt beide CTA's bruikbaar.
+ */
+function prorijschool_homepage_v2_cta() {
+	if ( ! is_page( 'homepagev2' ) ) {
+		return;
+	}
+	$path = get_stylesheet_directory() . '/assets/js/homepage-v2.js';
+	wp_enqueue_script(
+		'prorijschool-homepage-v2',
+		get_stylesheet_directory_uri() . '/assets/js/homepage-v2.js',
+		array(),
+		file_exists( $path ) ? filemtime( $path ) : PRORIJSCHOOL_VERSIE,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'prorijschool_homepage_v2_cta', 22 );
+
+/**
  * Zelfde stijlen binnen de Elementor-editor, zodat de redacteur ziet
  * wat de bezoeker straks ziet.
  */
@@ -126,3 +147,38 @@ function prorijschool_taal_klasse( $klassen ) {
 	return $klassen;
 }
 add_filter( 'body_class', 'prorijschool_taal_klasse' );
+
+/**
+ * De demosite mag niet in zoekmachines terechtkomen. Op het uiteindelijke
+ * productiedomein laat deze filter WordPress' normale SEO-instellingen intact.
+ */
+function prorijschool_demo_robots( $robots ) {
+	$host = isset( $_SERVER['HTTP_HOST'] ) ? strtolower( sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ) : '';
+	if ( str_ends_with( $host, '.necmardemo.nl' ) ) {
+		$robots['noindex']  = true;
+		$robots['nofollow'] = true;
+		unset( $robots['index'], $robots['follow'] );
+	}
+	return $robots;
+}
+add_filter( 'wp_robots', 'prorijschool_demo_robots', 99 );
+
+/**
+ * Compacte lokale bedrijfsgegevens voor zoekmachines. Contactgegevens worden
+ * bewust pas toegevoegd zodra de echte gegevens zijn vastgesteld.
+ */
+function prorijschool_schema() {
+	if ( is_admin() ) {
+		return;
+	}
+	$schema = array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'DrivingSchool',
+		'name'        => 'Prorijschool',
+		'url'         => home_url( '/' ),
+		'areaServed'  => array( 'Badhoevedorp', 'Hoofddorp', 'Vijfhuizen' ),
+		'availableLanguage' => array( 'nl', 'en', 'tr' ),
+	);
+	echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+add_action( 'wp_head', 'prorijschool_schema', 30 );
