@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prorijschool — Rijles in Badhoevedorp, Hoofddorp en Vijfhuizen</title>
+<meta name="description" content="Rijles in Badhoevedorp, Hoofddorp en Vijfhuizen. Handgeschakeld en automaat, lessen van 60, 90 of 120 minuten.">
+<link rel="alternate" hreflang="nl" href="/">
+<link rel="alternate" hreflang="en" href="/en/">
+<link rel="alternate" hreflang="tr" href="/tr/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nacht:#14161F;
+  --nacht-diep:#0C0E15;
+  --zand:#E9C87F;
+  --zand-diep:#D2A94F;
+  --zand-zacht:#F7EBD2;
+  --papier:#FBF7EF;
+  --koraal:#FF5A36;
+  --koraal-diep:#E8451F;
+  --blauw:#2B4BD8;
+  --grijs:#6A6459;
+  --grijs-licht:#948C7E;
+  --lijn:#E9E0CF;
+
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px; --s6:96px;
+  --max:1220px; --gut:clamp(20px,5vw,52px);
+  --r:16px; --r-groot:22px;
+  --schaduw:0 2px 4px rgba(20,22,31,.04), 0 8px 24px rgba(20,22,31,.07);
+  --schaduw-op:0 8px 16px rgba(20,22,31,.07), 0 24px 48px rgba(20,22,31,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Public Sans',system-ui,sans-serif;
+  background:var(--papier);color:var(--nacht);line-height:1.62;font-size:17px;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:68px;
+}
+@media(min-width:900px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition-duration:.01ms!important}}
+svg,img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Sora',system-ui,sans-serif;font-weight:800;line-height:1.04;letter-spacing:-.042em}
+h2{font-size:clamp(2.1rem,5vw,3.5rem)}
+h3{font-size:1.16rem;letter-spacing:-.024em;line-height:1.28;font-weight:700}
+p{max-width:62ch}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+.sectie{padding-block:clamp(64px,9vw,var(--s6))}
+.kop{max-width:44ch}
+.merkstreep{width:52px;height:4px;border-radius:2px;background:var(--zand-diep);margin-bottom:var(--s3)}
+.leid{color:var(--grijs);font-size:clamp(1.02rem,1.6vw,1.14rem);margin-top:var(--s2);max-width:52ch}
+.korrel{position:absolute;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* ---------------- knoppen ---------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;
+  padding:17px 30px;border-radius:100px;min-height:56px;cursor:pointer;
+  border:2px solid transparent;letter-spacing:-.012em;
+  transition:transform .18s cubic-bezier(.2,.8,.3,1),box-shadow .18s,background .16s,color .16s,border-color .16s;
+}
+.btn svg.pijl{transition:transform .2s cubic-bezier(.2,.8,.3,1)}
+.btn:hover svg.pijl{transform:translateX(4px)}
+.btn:focus-visible{outline:3px solid var(--zand);outline-offset:3px}
+.btn--koraal{background:var(--koraal);color:#fff;box-shadow:0 6px 18px rgba(255,90,54,.30)}
+.btn--koraal:hover{background:var(--koraal-diep);transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,90,54,.36)}
+.btn--zand{background:var(--zand);color:#2A2415;box-shadow:0 6px 18px rgba(210,169,79,.30)}
+.btn--zand:hover{background:var(--zand-diep);transform:translateY(-2px)}
+.btn--nacht{background:var(--nacht);color:#fff}
+.btn--nacht:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(20,22,31,.24)}
+.btn--rand{border-color:currentColor}
+.btn--rand:hover{transform:translateY(-2px)}
+.btn--stil{background:#fff;color:var(--nacht);border-color:var(--lijn)}
+.btn--stil:hover{border-color:var(--zand-diep);transform:translateY(-2px)}
+.btn--wa{background:#1FA855;color:#fff}
+.btn--wa:hover{background:#17853F;transform:translateY(-2px)}
+.btn--vol{width:100%}
+
+/* ---------------- header ---------------- */
+.top{position:sticky;top:0;z-index:90;background:rgba(12,14,21,.92);backdrop-filter:blur(14px);color:#fff}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);min-height:74px}
+.merk{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.merk span{font-family:'Sora',sans-serif;font-weight:800;font-size:1.16rem;letter-spacing:-.045em}
+.nav{display:none;gap:28px}
+@media(min-width:1120px){.nav{display:flex}}
+.nav a{font-size:.96rem;font-weight:500;color:#C7C0B2;padding:4px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav a:hover{color:#fff;border-bottom-color:var(--zand)}
+.top__acties{display:flex;align-items:center;gap:11px}
+.top .btn{padding:11px 22px;min-height:44px;font-size:.94rem}
+.top__login{display:none;font-size:.96rem;font-weight:500;color:#C7C0B2}
+@media(min-width:1120px){.top__login{display:inline}}
+.top__login:hover{color:#fff}
+
+/* taalwissel */
+.talen{display:none;align-items:center;gap:2px;background:rgba(255,255,255,.09);border-radius:100px;padding:3px}
+@media(min-width:760px){.talen{display:flex}}
+.talen a{
+  font-family:'Sora',sans-serif;font-weight:700;font-size:.79rem;letter-spacing:.02em;
+  padding:7px 13px;border-radius:100px;color:#C7C0B2;transition:background .15s,color .15s;
+}
+.talen a:hover{color:#fff}
+.talen a[aria-current="true"]{background:var(--zand);color:#2A2415}
+.burger{display:grid;place-items:center;width:44px;height:44px;background:rgba(255,255,255,.12);border:0;border-radius:12px;color:#fff;cursor:pointer}
+@media(min-width:1120px){.burger{display:none}}
+
+/* ---------------- hero met geïllustreerde achtergrond ---------------- */
+.hero{position:relative;color:#fff;overflow:hidden;isolation:isolate;background:#1D2136}
+.hero__beeld{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero__sluier{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,rgba(12,14,21,.86) 0%,rgba(12,14,21,.62) 42%,rgba(12,14,21,.18) 68%,transparent 100%);}
+@media(max-width:859px){.hero__sluier{background:linear-gradient(180deg,rgba(12,14,21,.84) 0%,rgba(12,14,21,.66) 55%,rgba(12,14,21,.86) 100%)}}
+.hero__in{position:relative;z-index:3;display:grid;gap:var(--s4);
+  padding-block:clamp(52px,7vw,92px) clamp(64px,9vw,110px)}
+@media(min-width:860px){.hero__in{grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,56px);align-items:center}}
+.hero h1{font-size:clamp(2.9rem,7.6vw,5.3rem);letter-spacing:-.052em;margin-bottom:var(--s3);color:var(--zand)}
+.hero h1 .wit{color:#fff}
+.hero__sub{font-size:clamp(1.06rem,1.9vw,1.26rem);color:#DCD5C6;max-width:40ch}
+.bewijs{display:flex;flex-wrap:wrap;gap:0;margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid rgba(233,200,127,.32)}
+.bw{padding-right:30px;margin-right:30px;border-right:1px solid rgba(233,200,127,.28)}
+.bw:last-child{border-right:0;padding-right:0;margin-right:0}
+.bw__cijfer{font-family:'Sora',sans-serif;font-weight:800;font-size:2rem;letter-spacing:-.045em;line-height:1;color:var(--zand)}
+.bw__label{font-size:.85rem;color:#BDB6A7;margin-top:6px}
+
+.leadpaneel{background:#fff;color:var(--nacht);border-radius:var(--r-groot);
+  padding:clamp(26px,3.2vw,34px);box-shadow:0 30px 70px rgba(8,10,18,.46);position:relative;z-index:4}
+.leadpaneel h2{font-size:1.5rem;letter-spacing:-.035em}
+.leadpaneel__sub{font-size:.95rem;color:var(--grijs);margin:6px 0 var(--s3)}
+.veld{margin-bottom:12px}
+.veld label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}
+.veld input,.veld select{width:100%;padding:16px;border:2px solid var(--lijn);border-radius:14px;
+  font-family:inherit;font-size:1rem;background:#fff;min-height:56px;transition:border-color .15s}
+.veld input::placeholder{color:#B3AB9C}
+.veld input:focus,.veld select:focus{outline:0;border-color:var(--zand-diep)}
+.leadnoot{font-size:.8rem;color:var(--grijs-licht);margin-top:12px;text-align:center}
+.of{display:flex;align-items:center;gap:12px;margin:16px 0;color:var(--grijs-licht);font-size:.83rem}
+.of::before,.of::after{content:"";height:1px;background:var(--lijn);flex:1}
+
+/* ---------------- melding ---------------- */
+.melding{background:var(--nacht);color:#fff;padding:15px 0;position:relative;z-index:5}
+.melding__in{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;font-size:.95rem}
+.puls{width:9px;height:9px;border-radius:50%;background:var(--zand);flex-shrink:0;box-shadow:0 0 0 0 rgba(233,200,127,.7);animation:puls 2.4s infinite}
+@keyframes puls{70%{box-shadow:0 0 0 11px rgba(233,200,127,0)}100%{box-shadow:0 0 0 0 rgba(233,200,127,0)}}
+.melding a{color:var(--zand);font-weight:700;border-bottom:1.5px solid currentColor}
+.melding a:hover{color:#fff;border-color:#fff}
+
+/* ---------------- opleidingen ---------------- */
+.mozaiek{display:grid;gap:var(--s2);margin-top:var(--s4)}
+@media(min-width:700px){.mozaiek{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.mozaiek{grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(212px,auto)}
+  .kaart--groot{grid-row:span 2}}
+.kaart{background:#fff;border-radius:var(--r-groot);padding:28px;box-shadow:var(--schaduw);
+  display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden;
+  transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s}
+.kaart:hover{transform:translateY(-5px);box-shadow:var(--schaduw-op)}
+.kaart:hover .kaart__voet svg{transform:translateX(5px)}
+.kaart--nacht{background:linear-gradient(158deg,#22252F 0%,var(--nacht-diep) 100%);color:#fff}
+.kaart--nacht p{color:#B6AF9F}
+.kaart--nacht .glyph{color:var(--zand)}
+.kaart--zand{background:linear-gradient(158deg,#F0D89E 0%,var(--zand-diep) 100%);color:#2A2415}
+.kaart--zand p{color:#584A28}
+.kaart p{font-size:.95rem;color:var(--grijs);max-width:36ch}
+.kaart__voet{margin-top:auto;font-family:'Sora',sans-serif;font-weight:700;font-size:.94rem;display:inline-flex;align-items:center;gap:8px}
+.kaart__voet svg{transition:transform .2s cubic-bezier(.2,.8,.3,1)}
+.glyph{width:50px;height:50px}
+.kaart--groot .glyph{width:76px;height:76px}
+.kaart--groot h3{font-size:1.5rem}
+
+/* ---------------- rekenhulp ---------------- */
+.reken{background:var(--nacht);color:#fff;border-radius:28px;position:relative;overflow:hidden;
+  padding:clamp(30px,4.2vw,56px);display:grid;gap:var(--s4)}
+@media(min-width:760px){.reken{grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,56px);align-items:center}}
+.reken>*{position:relative;z-index:2}
+.reken h2{font-size:clamp(1.85rem,3.5vw,2.7rem)}
+.reken h2 em{font-style:normal;color:var(--zand)}
+.reken__intro{color:#A39B8B;margin-top:var(--s2)}
+.rij{margin-bottom:22px}
+.rij>span{display:block;font-size:.85rem;font-weight:700;color:#948C7E;margin-bottom:10px}
+.keuzes{display:flex;gap:9px;flex-wrap:wrap}
+.keuze{flex:1;min-width:84px;padding:14px 10px;border:2px solid #2C2E39;background:#1C1F29;
+  border-radius:100px;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:.93rem;
+  cursor:pointer;transition:border-color .16s,background .16s,color .16s,transform .16s}
+.keuze:hover{border-color:#454859;transform:translateY(-1px)}
+.keuze[aria-pressed="true"]{background:var(--zand);border-color:var(--zand);color:#2A2415}
+.keuze:focus-visible{outline:2px solid var(--zand);outline-offset:3px}
+.uitkomst{background:#1C1F29;border:1px solid #2C2E39;border-radius:22px;padding:30px;text-align:center}
+.uitkomst__label{font-size:.85rem;color:#948C7E}
+.uitkomst__bedrag{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.5rem,5.6vw,3.5rem);letter-spacing:-.055em;margin:6px 0;color:var(--zand)}
+.uitkomst__noot{font-size:.86rem;color:#948C7E;margin-bottom:var(--s3)}
+
+/* ---------------- pakketten ---------------- */
+.pakketten{display:grid;gap:var(--s2);margin-top:var(--s4);align-items:center}
+@media(min-width:880px){.pakketten{grid-template-columns:repeat(3,1fr)}}
+.pak{background:#fff;border-radius:var(--r-groot);padding:34px 30px;box-shadow:var(--schaduw);display:flex;flex-direction:column;height:100%}
+.pak--uit{background:linear-gradient(158deg,#22252F 0%,var(--nacht-diep) 100%);color:#fff;
+  box-shadow:0 20px 48px rgba(20,22,31,.32);position:relative;overflow:hidden}
+@media(min-width:880px){.pak--uit{transform:scale(1.05);z-index:2}}
+.pak--uit>*{position:relative;z-index:2}
+.pak--uit .pak__per{color:#A39B8B}
+.pak--uit li{color:#DAD3C4}
+.pak--uit .pak__prijs{color:var(--zand)}
+.pak--uit li::before{background:var(--zand)}
+.pak__vlag{display:inline-block;background:var(--zand);color:#2A2415;font-family:'Sora',sans-serif;font-weight:700;font-size:.77rem;padding:6px 15px;border-radius:100px;margin-bottom:var(--s2)}
+.pak__prijs{font-family:'Sora',sans-serif;font-weight:800;font-size:3.05rem;letter-spacing:-.058em;margin:14px 0 2px}
+.pak__per{font-size:.93rem;color:var(--grijs);margin-bottom:var(--s3)}
+.pak ul{list-style:none;display:grid;gap:11px;font-size:.96rem;margin-bottom:var(--s4)}
+.pak li{padding-left:27px;position:relative}
+.pak li::before{content:"";position:absolute;left:0;top:10px;width:13px;height:2px;border-radius:2px;background:var(--zand-diep)}
+.pak .btn{margin-top:auto}
+.voordeel{display:inline-block;background:var(--zand-zacht);color:#7A5C10;border-radius:100px;padding:7px 16px;font-size:.86rem;font-weight:700;margin-bottom:var(--s3)}
+.pak--uit .voordeel{background:rgba(233,200,127,.18);color:var(--zand)}
+
+/* ---------------- werkwijze ---------------- */
+.stappen{display:grid;gap:var(--s3);margin-top:var(--s4)}
+@media(min-width:960px){.stappen{grid-template-columns:repeat(5,1fr)}}
+.stap{position:relative;padding-top:var(--s3)}
+.stap::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:2px;background:var(--lijn)}
+.stap:nth-child(-n+4)::after{background:var(--zand-diep)}
+.stap:nth-child(5)::after{background:var(--koraal)}
+.stap__nr{font-family:'Sora',sans-serif;font-weight:800;font-size:.85rem;color:var(--zand-diep);display:block;margin-bottom:10px}
+.stap:nth-child(5) .stap__nr{color:var(--koraal)}
+.stap p{font-size:.93rem;color:var(--grijs);margin-top:6px}
+
+/* ---------------- portaal ---------------- */
+.portaal{background:var(--zand-zacht)}
+.portaal__in{display:grid;gap:var(--s4);align-items:center}
+@media(min-width:820px){.portaal__in{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,60px)}}
+.telefoon{background:var(--nacht);border-radius:30px;padding:14px;max-width:325px;margin:0 auto;box-shadow:0 26px 60px rgba(20,22,31,.26)}
+.telefoon__scherm{background:#1C1F29;border-radius:20px;padding:18px;display:grid;gap:11px}
+.tegel{background:#262A36;border-radius:14px;padding:16px}
+.tegel--zand{background:linear-gradient(150deg,#F0D89E,var(--zand-diep));color:#2A2415}
+.t__label{font-size:.75rem;color:#948C7E;margin-bottom:3px}
+.tegel--zand .t__label{color:#6B5722}
+.t__waarde{font-family:'Sora',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;letter-spacing:-.025em}
+.tegel--zand .t__waarde{color:#2A2415}
+.t-rij{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.balkje{height:6px;border-radius:3px;background:#3A3E4C;margin-top:10px;overflow:hidden}
+.balkje i{display:block;height:100%;width:68%;border-radius:3px;background:var(--zand)}
+
+/* ---------------- theorie ---------------- */
+.theorie{display:grid;gap:var(--s2);margin-top:var(--s4)}
+@media(min-width:800px){.theorie{grid-template-columns:1fr 1fr}}
+.tblok{background:#fff;border-radius:var(--r-groot);padding:34px 30px;box-shadow:var(--schaduw)}
+.tblok--nacht{background:linear-gradient(158deg,#22252F,var(--nacht-diep));color:#fff}
+.tblok ul{list-style:none;display:grid;gap:10px;font-size:.96rem;margin:var(--s2) 0 var(--s4)}
+.tblok--nacht li{color:#C2BBAB}
+.tblok li{padding-left:27px;position:relative}
+.tblok li::before{content:"";position:absolute;left:0;top:10px;width:13px;height:2px;border-radius:2px;background:var(--zand-diep)}
+
+/* ---------------- regio ---------------- */
+.regio__in{display:grid;gap:var(--s4);align-items:center}
+@media(min-width:820px){.regio__in{grid-template-columns:.92fr 1.08fr;gap:clamp(32px,5vw,56px)}}
+.plaatsen{display:grid;gap:12px;margin-top:var(--s3)}
+.plaats{background:#fff;border-radius:var(--r);padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:var(--s2);box-shadow:var(--schaduw);transition:transform .2s cubic-bezier(.2,.8,.3,1),box-shadow .2s}
+.plaats:hover{transform:translateX(6px);box-shadow:var(--schaduw-op)}
+.plaats:hover .pijl{transform:translateX(4px)}
+.plaats p{font-size:.91rem;color:var(--grijs);margin-top:3px}
+.pijl{color:var(--zand-diep);flex-shrink:0;transition:transform .2s cubic-bezier(.2,.8,.3,1)}
+
+/* ---------------- reviews ---------------- */
+.score{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s3)}
+.score__cijfer{font-family:'Sora',sans-serif;font-weight:800;font-size:3.1rem;letter-spacing:-.055em;line-height:1}
+.sterren{color:var(--zand-diep);font-size:1.2rem;letter-spacing:3px}
+.score__aantal{color:var(--grijs);font-size:.93rem}
+.reviews{display:grid;gap:var(--s2);margin-top:var(--s4)}
+@media(min-width:780px){.reviews{grid-template-columns:repeat(3,1fr)}}
+.review{background:#fff;border-radius:var(--r-groot);padding:30px 28px;box-shadow:var(--schaduw)}
+.review__quote{font-family:'Sora',sans-serif;font-weight:800;font-size:2.2rem;color:var(--zand-diep);line-height:.7;display:block;margin-bottom:10px}
+.review p{font-size:.97rem}
+.review__wie{margin-top:var(--s2);font-size:.88rem;color:var(--grijs-licht)}
+
+/* ---------------- faq ---------------- */
+.faq{max-width:860px;margin-top:var(--s4);display:grid;gap:10px}
+.faq details{background:#fff;border-radius:var(--r);padding:0 26px;box-shadow:var(--schaduw);transition:box-shadow .18s}
+.faq details[open]{box-shadow:var(--schaduw-op)}
+.faq summary{font-family:'Sora',sans-serif;font-weight:700;font-size:1.05rem;padding:22px 42px 22px 0;cursor:pointer;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;border-right:2.5px solid var(--zand-diep);border-bottom:2.5px solid var(--zand-diep);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.faq summary:focus-visible{outline:2px solid var(--zand-diep);outline-offset:4px;border-radius:6px}
+.faq p{padding-bottom:24px;color:var(--grijs);font-size:.98rem}
+
+/* ---------------- slot ---------------- */
+.slot{background:linear-gradient(150deg,#22252F,var(--nacht-diep));color:#fff;position:relative;overflow:hidden}
+.slot__in{position:relative;z-index:2;text-align:center}
+.slot h2{font-size:clamp(2.2rem,5.6vw,3.8rem)}
+.slot h2 em{font-style:normal;color:var(--zand)}
+.slot p{color:#B6AF9F;margin:var(--s2) auto 0;font-size:1.1rem}
+.slot__knoppen{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;margin-top:var(--s4)}
+.slot .btn--rand{border-color:rgba(233,200,127,.6);color:var(--zand)}
+.slot .btn--rand:hover{background:rgba(233,200,127,.13);border-color:var(--zand)}
+
+/* ---------------- footer ---------------- */
+.voet{background:var(--nacht-diep);color:#948C7E;padding-block:var(--s5) var(--s3);font-size:.93rem}
+.voet__top{display:grid;gap:var(--s4);padding-bottom:var(--s4);border-bottom:1px solid rgba(255,255,255,.08)}
+@media(min-width:900px){.voet__top{grid-template-columns:1.2fr 2fr;gap:60px}}
+.voet__merk{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:1.18rem;letter-spacing:-.045em;margin-bottom:var(--s2)}
+.voet__grid{display:grid;gap:var(--s3)}
+@media(min-width:560px){.voet__grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.voet__grid{grid-template-columns:repeat(4,1fr)}}
+.voet h4{font-family:'Sora',sans-serif;font-size:.95rem;color:#fff;margin-bottom:14px;font-weight:700}
+.voet ul{list-style:none;display:grid;gap:10px}
+.voet a:hover{color:var(--zand)}
+.voet__onder{margin-top:var(--s3);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:.86rem}
+.voet__talen{display:flex;gap:6px}
+.voet__talen a{border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:5px 13px;font-family:'Sora',sans-serif;font-weight:700;font-size:.78rem}
+.voet__talen a[aria-current="true"]{background:var(--zand);color:#2A2415;border-color:var(--zand)}
+
+/* ---------------- mobiel ---------------- */
+.mobbar{position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--nacht-diep);border-top:1px solid #262A36;display:grid;grid-template-columns:repeat(4,1fr)}
+@media(min-width:900px){.mobbar{display:none}}
+.mobbar a,.mobbar button{background:none;border:0;color:#C7C0B2;font-family:'Public Sans',sans-serif;font-size:.71rem;font-weight:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:68px;cursor:pointer}
+.mobbar a:active{background:#1C1F29}
+.mobbar svg{width:21px;height:21px}
+.mobbar .wa{color:#4FD98A}
+.wa-zwevend{display:none;position:fixed;right:28px;bottom:28px;z-index:88;width:60px;height:60px;border-radius:50%;background:#1FA855;color:#fff;place-items:center;box-shadow:0 12px 30px rgba(31,168,85,.45);transition:transform .2s}
+@media(min-width:900px){.wa-zwevend{display:grid}}
+.wa-zwevend:hover{transform:scale(1.07)}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="top">
+  <div class="wrap top__in">
+    <a class="merk" href="/">
+      <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="#E9C87F"/>
+        <path d="M11 30 L20 10 L29 30" stroke="#14161F" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 25 H25" stroke="#14161F" stroke-width="3.6" stroke-linecap="round" opacity=".45"/>
+      </svg>
+      <span>Prorijschool</span>
+    </a>
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <a href="#opleidingen">Rijlessen</a><a href="#pakketten">Pakketten</a>
+      <a href="#theorie">Theorie</a><a href="#regio">Regio</a><a href="#vragen">Vragen</a>
+    </nav>
+    <div class="top__acties">
+      <div class="talen" role="group" aria-label="Taal kiezen">
+        <a href="/" aria-current="true" hreflang="nl">NL</a>
+        <a href="/en/" hreflang="en">EN</a>
+        <a href="/tr/" hreflang="tr">TR</a>
+      </div>
+      <a class="top__login" href="#">Inloggen</a>
+      <a class="btn btn--koraal" href="#aanvraag">Proefles boeken</a>
+      <button class="burger" aria-label="Menu openen"><svg width="19" height="14" viewBox="0 0 19 14" aria-hidden="true"><path d="M0 1h19M0 7h19M0 13h19" stroke="currentColor" stroke-width="2"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="aanvraag">
+
+  <!-- geïllustreerde achtergrond: polderweg bij avondlicht -->
+  <svg class="hero__beeld" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="lucht" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0"    stop-color="#171B33"/>
+        <stop offset=".34"  stop-color="#3A3357"/>
+        <stop offset=".58"  stop-color="#8A5E5A"/>
+        <stop offset=".76"  stop-color="#D98F5A"/>
+        <stop offset=".88"  stop-color="#EFC287"/>
+        <stop offset="1"    stop-color="#F6DCA4"/>
+      </linearGradient>
+      <radialGradient id="zon" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#FFE9BC" stop-opacity=".95"/>
+        <stop offset="1" stop-color="#FFD089" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="asfalt" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2A2733"/>
+        <stop offset="1" stop-color="#15141C"/>
+      </linearGradient>
+      <linearGradient id="berm" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4A4436"/>
+        <stop offset="1" stop-color="#24211B"/>
+      </linearGradient>
+    </defs>
+
+    <rect width="1600" height="900" fill="url(#lucht)"/>
+    <circle cx="1120" cy="560" r="260" fill="url(#zon)"/>
+    <circle cx="1120" cy="558" r="46" fill="#FFEFCB" opacity=".85"/>
+
+    <!-- wolkenbanden -->
+    <g opacity=".30" fill="#F7DCB0">
+      <rect x="180"  y="300" width="360" height="12" rx="6"/>
+      <rect x="620"  y="258" width="240" height="10" rx="5"/>
+      <rect x="980"  y="330" width="420" height="13" rx="6"/>
+      <rect x="360"  y="392" width="300" height="10" rx="5"/>
+      <rect x="1120" y="418" width="330" height="11" rx="5"/>
+    </g>
+
+    <!-- polderhorizon -->
+    <rect x="0" y="590" width="1600" height="310" fill="url(#berm)"/>
+    <path d="M0 592 H1600" stroke="#6A5F45" stroke-width="2" opacity=".5"/>
+
+    <!-- molen -->
+    <g fill="#191722" opacity=".92">
+      <path d="M196 592 L214 500 L246 500 L264 592 Z"/>
+      <rect x="219" y="482" width="22" height="20" rx="4"/>
+    </g>
+    <g stroke="#191722" stroke-width="5.5" stroke-linecap="round" opacity=".92">
+      <path d="M230 490 L230 424"/><path d="M230 490 L296 490"/>
+      <path d="M230 490 L230 556"/><path d="M230 490 L164 490"/>
+    </g>
+
+    <!-- bomenrij -->
+    <g fill="#1B1924" opacity=".85">
+      <ellipse cx="420" cy="566" rx="15" ry="30"/><rect x="417" y="566" width="6" height="28"/>
+      <ellipse cx="472" cy="572" rx="13" ry="25"/><rect x="469" y="572" width="6" height="22"/>
+      <ellipse cx="524" cy="562" rx="16" ry="33"/><rect x="521" y="562" width="6" height="32"/>
+      <ellipse cx="1380" cy="568" rx="14" ry="28"/><rect x="1377" y="568" width="6" height="26"/>
+      <ellipse cx="1436" cy="574" rx="12" ry="23"/><rect x="1433" y="574" width="6" height="20"/>
+    </g>
+
+    <!-- weg in perspectief -->
+    <path d="M812 592 L1600 900 L120 900 Z" fill="url(#asfalt)"/>
+    <path d="M812 592 L1420 900 L300 900 Z" fill="#211F2A"/>
+    <path d="M806 592 L640 900 L560 900 Z" fill="#2E2B38" opacity=".6"/>
+
+    <!-- middenbelijning -->
+    <g fill="#F6DCA4">
+      <rect x="809" y="600"  width="6"  height="14" rx="3" opacity=".55"/>
+      <rect x="807" y="628"  width="9"  height="20" rx="4" opacity=".65"/>
+      <rect x="804" y="668"  width="14" height="28" rx="6" opacity=".75"/>
+      <rect x="799" y="722"  width="22" height="38" rx="8" opacity=".85"/>
+      <rect x="791" y="792"  width="35" height="48" rx="10" opacity=".92"/>
+      <rect x="779" y="874"  width="54" height="26" rx="12"/>
+    </g>
+    <!-- zijbelijning -->
+    <path d="M800 594 L190 900" stroke="#EBD5A8" stroke-width="4" opacity=".35"/>
+    <path d="M824 594 L1500 900" stroke="#EBD5A8" stroke-width="4" opacity=".35"/>
+
+    <!-- lantaarnpalen -->
+    <g stroke="#191722" stroke-width="5" opacity=".8" stroke-linecap="round">
+      <path d="M1180 592 L1180 470"/><path d="M1180 470 q30 0 34 24"/>
+      <path d="M1470 592 L1470 430"/><path d="M1470 430 q34 0 38 28"/>
+    </g>
+  </svg>
+
+  <span class="hero__sluier" aria-hidden="true"></span>
+  <span class="korrel" aria-hidden="true"></span>
+
+  <div class="wrap hero__in">
+    <div>
+      <h1><span class="wit">Over drie maanden</span><br>rij jij zelf.</h1>
+      <p class="hero__sub">Rijles in Badhoevedorp, Hoofddorp en Vijfhuizen. Handgeschakeld of automaat, en les in je eigen taal.</p>
+      <div class="bewijs">
+        <div class="bw"><div class="bw__cijfer">4,8</div><div class="bw__label">uit 127 reviews</div></div>
+        <div class="bw"><div class="bw__cijfer">71%</div><div class="bw__label">slaagt in één keer</div></div>
+        <div class="bw"><div class="bw__cijfer">60–120</div><div class="bw__label">minuten per les</div></div>
+      </div>
+    </div>
+
+    <div class="leadpaneel">
+      <h2>Plan je proefles</h2>
+      <p class="leadpaneel__sub">We bellen je binnen één werkdag terug met een voorstel.</p>
+      <div class="veld"><label for="nm">Je naam</label><input id="nm" type="text" placeholder="Voornaam en achternaam"></div>
+      <div class="veld"><label for="tel">Telefoonnummer</label><input id="tel" type="tel" placeholder="06 12 34 56 78"></div>
+      <div class="veld"><label for="pl">Waar woon je?</label>
+        <select id="pl"><option>Badhoevedorp</option><option>Hoofddorp</option><option>Vijfhuizen</option><option>Anders, in de buurt</option></select>
+      </div>
+      <a class="btn btn--koraal btn--vol" href="#">Bel mij terug
+        <svg class="pijl" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="leadnoot">Gratis en vrijblijvend. Geen automatische incasso.</p>
+      <div class="of">of</div>
+      <a class="btn btn--wa btn--vol" href="#">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.2 1.3-2 1.4-.5.1-1.2.1-3.8-.8-3.2-1.3-5.2-4.5-5.4-4.7-.1-.2-1.2-1.6-1.2-3.1 0-1.5.8-2.2 1-2.5.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2 0 .4-.1.6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.2.1.4.1.6-.1l.8-1c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+        Stuur een WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MELDING ============ -->
+<div class="melding">
+  <div class="wrap melding__in">
+    <span class="puls" aria-hidden="true"></span>
+    <span>Volgende theoriecursus op zaterdag 21 september — nog 6 plaatsen vrij.</span>
+    <a href="#theorie">Reserveer je plek</a>
+  </div>
+</div>
+
+<!-- ============ OPLEIDINGEN ============ -->
+<section class="sectie" id="opleidingen">
+  <div class="wrap">
+    <div class="kop">
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Kies je opleiding</h2>
+      <p class="leid">Zes opleidingen, één vaste instructeur die je van proefles tot examen begeleidt.</p>
+    </div>
+
+    <div class="mozaiek">
+      <a class="kaart kaart--groot kaart--nacht" href="#">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M9 41h46M13 41l4.6-14A4 4 0 0 1 21.4 24h21.2a4 4 0 0 1 3.8 3L51 41" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="9" y="41" width="46" height="11" rx="4"/><circle cx="20" cy="52" r="4.2"/><circle cx="44" cy="52" r="4.2"/>
+          <path d="M32 17v-5M32 12h7" stroke-linecap="round"/>
+        </svg>
+        <h3>Autorijles handgeschakeld</h3>
+        <p>De volledige opleiding. Je leert schakelen en koppelen, en mag daarna in élke auto rijden — ook een automaat.</p>
+        <span class="kaart__voet">Bekijk de opleiding
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="kaart" href="#">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <circle cx="32" cy="32" r="19"/><path d="M32 21v22M32 21h-6.5M32 30.5h6.5M32 40h-6.5" stroke-linecap="round"/>
+        </svg>
+        <h3>Automaat rijles</h3>
+        <p>Geen koppeling, dus alle aandacht voor het verkeer.</p>
+        <span class="kaart__voet">Meer weten <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="kaart" href="#">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <rect x="9" y="31" width="46" height="15" rx="5"/>
+          <path d="M15 31l3.8-10A3 3 0 0 1 21.6 19h20.8a3 3 0 0 1 2.8 2L49 31" stroke-linejoin="round"/>
+          <rect x="26" y="9" width="12" height="6.5" rx="2"/><path d="M32 15.5v3" stroke-linecap="round"/>
+          <circle cx="20" cy="46" r="3.8"/><circle cx="44" cy="46" r="3.8"/>
+        </svg>
+        <h3>Taxilessen</h3>
+        <p>Praktijkopleiding voor de taxipas.</p>
+        <span class="kaart__voet">Meer weten <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="kaart kaart--zand" href="#">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <rect x="5" y="29" width="23" height="13" rx="4"/><rect x="36" y="25" width="23" height="17" rx="4"/>
+          <path d="M28 35.5h8" stroke-linecap="round"/><circle cx="13" cy="46" r="3.8"/><circle cx="48" cy="46" r="3.8"/>
+        </svg>
+        <h3>Aanhangwagen · rijbewijs BE</h3>
+        <p>Koppelen, manoeuvreren en achteruitrijden met aanhanger.</p>
+        <span class="kaart__voet">Meer weten <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="kaart" href="#">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <rect x="8" y="13" width="48" height="29" rx="4"/><path d="M17 23h20M17 31h13" stroke-linecap="round"/>
+          <path d="M21 53h22M27 42v11M37 42v11" stroke-linecap="round"/>
+        </svg>
+        <h3>Theoriecursus op locatie</h3>
+        <p>In één zaterdag door de stof, met een docent erbij.</p>
+        <span class="kaart__voet">Bekijk data <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="kaart" href="#">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <rect x="20" y="7" width="24" height="42" rx="6"/><path d="M28.5 13h7" stroke-linecap="round"/>
+          <path d="M26.5 30l4 4 7.5-8.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 56h14" stroke-linecap="round"/>
+        </svg>
+        <h3>Online theorie</h3>
+        <p>Oefenvragen en oefenexamens, wanneer het jou uitkomt.</p>
+        <span class="kaart__voet">Meer weten <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REKENHULP ============ -->
+<section class="sectie" style="padding-top:0">
+  <div class="wrap">
+    <div class="reken">
+      <span class="korrel" aria-hidden="true"></span>
+      <div>
+        <h2>Wat gaat het <em>mij</em> kosten?</h2>
+        <p class="reken__intro">Geen offerte aanvragen, geen belletje afwachten. Kies hieronder je situatie en je ziet direct een indicatie.</p>
+        <div class="rij" style="margin-top:var(--s4)">
+          <span>Ik wil lessen in</span>
+          <div class="keuzes" role="group" aria-label="Type auto">
+            <button class="keuze" data-groep="auto" data-waarde="1" aria-pressed="true">Handgeschakeld</button>
+            <button class="keuze" data-groep="auto" data-waarde="0.94" aria-pressed="false">Automaat</button>
+          </div>
+        </div>
+        <div class="rij">
+          <span>Ik heb al</span>
+          <div class="keuzes" role="group" aria-label="Ervaring">
+            <button class="keuze" data-groep="erv" data-waarde="34" aria-pressed="true">Geen ervaring</button>
+            <button class="keuze" data-groep="erv" data-waarde="24" aria-pressed="false">Een beetje</button>
+            <button class="keuze" data-groep="erv" data-waarde="16" aria-pressed="false">Veel</button>
+          </div>
+        </div>
+        <div class="rij" style="margin-bottom:0">
+          <span>Lesduur die ik prettig vind</span>
+          <div class="keuzes" role="group" aria-label="Lesduur">
+            <button class="keuze" data-groep="duur" data-waarde="60" aria-pressed="false">60 min</button>
+            <button class="keuze" data-groep="duur" data-waarde="90" aria-pressed="true">90 min</button>
+            <button class="keuze" data-groep="duur" data-waarde="120" aria-pressed="false">120 min</button>
+          </div>
+        </div>
+      </div>
+      <div class="uitkomst">
+        <div class="uitkomst__label">Indicatie totale kosten</div>
+        <div class="uitkomst__bedrag" id="bedrag">€ 2.150</div>
+        <div class="uitkomst__noot" id="detail">ongeveer 23 lessen van 90 minuten, inclusief examen</div>
+        <a class="btn btn--zand btn--vol" href="#aanvraag">Vraag een proefles aan
+          <svg class="pijl" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p style="font-size:.81rem;color:#948C7E;margin-top:var(--s2)">Een indicatie, geen offerte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAKKETTEN ============ -->
+<section class="sectie" style="background:#fff">
+  <div class="wrap" id="pakketten">
+    <div class="kop">
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Pakketten en prijzen</h2>
+      <p class="leid">Wat je hier ziet, is wat je betaalt. Geen kortingscodes, geen acties achteraf. Betalen kan in vier termijnen.</p>
+    </div>
+    <div class="pakketten">
+      <div class="pak">
+        <h3>Losse rijles</h3>
+        <div class="pak__prijs">€ 62</div>
+        <div class="pak__per">per les van 60 minuten</div>
+        <ul><li>90 minuten voor € 89</li><li>120 minuten voor € 116</li><li>Handgeschakeld of automaat</li><li>Per les afrekenen</li></ul>
+        <a class="btn btn--stil" href="#aanvraag">Losse les boeken</a>
+      </div>
+      <div class="pak pak--uit">
+        <span class="korrel" aria-hidden="true"></span>
+        <span class="pak__vlag">Meest gekozen</span>
+        <h3>Rittenkaart 20 uur</h3>
+        <div class="pak__prijs">€ 1.140</div>
+        <div class="pak__per">1.200 minuten lestegoed</div>
+        <div class="voordeel">Je bespaart € 100</div>
+        <ul><li>Zelf je lesduur kiezen per rit</li><li>Tegoed in minuten, niets vervalt</li><li>Tot 24 uur vooraf gratis annuleren</li><li>Toegang tot je leerlingomgeving</li></ul>
+        <a class="btn btn--zand" href="#aanvraag">Rittenkaart kiezen</a>
+      </div>
+      <div class="pak">
+        <h3>Compleet pakket</h3>
+        <div class="pak__prijs">€ 1.995</div>
+        <div class="pak__per">alles inbegrepen tot het examen</div>
+        <div class="voordeel">Je bespaart € 155</div>
+        <ul><li>1.800 minuten rijles</li><li>Praktijkexamen en tussentijdse toets</li><li>Theoriecursus en gezondheidsverklaring</li><li>CBR-kosten inbegrepen</li></ul>
+        <a class="btn btn--stil" href="#">Bekijk wat erin zit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WERKWIJZE ============ -->
+<section class="sectie">
+  <div class="wrap">
+    <div class="kop">
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Zo gaat het bij ons</h2>
+    </div>
+    <div class="stappen">
+      <div class="stap"><span class="stap__nr">01</span><h3>Proefles</h3><p>We kijken wat je al kunt en of het klikt met je instructeur.</p></div>
+      <div class="stap"><span class="stap__nr">02</span><h3>Lesplan</h3><p>Samen bepalen we lesduur, tempo en het verwachte aantal lessen.</p></div>
+      <div class="stap"><span class="stap__nr">03</span><h3>Rijlessen</h3><p>Na elke les plan je meteen de volgende, op een moment dat jou past.</p></div>
+      <div class="stap"><span class="stap__nr">04</span><h3>Voortgang</h3><p>Je ziet per onderdeel hoe je ervoor staat en waar je nog aan werkt.</p></div>
+      <div class="stap"><span class="stap__nr">05</span><h3>Examen</h3><p>Je gaat pas op examen als je instructeur zegt dat je klaar bent.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTAAL ============ -->
+<section class="sectie portaal">
+  <div class="wrap portaal__in">
+    <div>
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Alles in je eigen omgeving</h2>
+      <p class="leid">Geen appjes terugscrollen om te weten wanneer je volgende les is. Je afspraken, je lestegoed, wat je instructeur noteerde en wat er openstaat — op één plek, op je telefoon.</p>
+      <div style="margin-top:var(--s4)"><a class="btn btn--nacht" href="#">Inloggen als leerling</a></div>
+    </div>
+    <div class="telefoon" aria-hidden="true">
+      <div class="telefoon__scherm">
+        <div style="font-family:'Sora',sans-serif;font-weight:700;color:#fff;font-size:1.06rem;margin-bottom:4px">Hoi Sanne</div>
+        <div class="tegel tegel--zand">
+          <div class="t__label">Volgende les</div>
+          <div class="t__waarde">Do 10 sep · 14:00</div>
+          <div class="t__label" style="margin-top:5px">90 min · Youssef · 12-AB-CD</div>
+        </div>
+        <div class="t-rij">
+          <div class="tegel"><div class="t__label">Lestegoed</div><div class="t__waarde">840 min</div></div>
+          <div class="tegel"><div class="t__label">Openstaand</div><div class="t__waarde">€ 285</div></div>
+        </div>
+        <div class="tegel">
+          <div class="t__label">Voortgang</div>
+          <div class="t__waarde" style="font-size:.95rem">Rotondes en invoegen</div>
+          <div class="balkje"><i></i></div>
+        </div>
+        <div class="tegel">
+          <div class="t__label">Laatste aantekening</div>
+          <div class="t__waarde" style="font-size:.89rem;font-weight:500;line-height:1.5;font-family:'Public Sans',sans-serif">Rotondes gaan goed. Volgende keer invoegen op de A9.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THEORIE ============ -->
+<section class="sectie" id="theorie" style="background:#fff">
+  <div class="wrap">
+    <div class="kop">
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Theorie erbij, op jouw manier</h2>
+      <p class="leid">Zonder theoriecertificaat geen praktijkexamen. Kies wat bij je past.</p>
+    </div>
+    <div class="theorie">
+      <div class="tblok tblok--nacht">
+        <h3>Cursus op locatie</h3>
+        <ul><li>Eén zaterdag, van uitleg tot proefexamen</li><li>Docent die je vragen meteen beantwoordt</li><li>Kleine groepen, maximaal 12 personen</li><li>Eerstvolgende: 21 september</li></ul>
+        <a class="btn btn--zand" href="#">Reserveer je plek</a>
+      </div>
+      <div class="tblok">
+        <h3>Online theorie</h3>
+        <ul><li>Alle hoofdstukken met video en uitleg</li><li>Oefenvragen per onderwerp</li><li>Volledige oefenexamens</li><li>Je ziet welke onderdelen aandacht nodig hebben</li></ul>
+        <a class="btn btn--stil" href="#">Meer over online theorie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGIO ============ -->
+<section class="sectie" id="regio">
+  <div class="wrap regio__in">
+    <div>
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Waar we rijden</h2>
+      <p class="leid">We lesgeven in en rond de Haarlemmermeer. Ophalen op een adres in de buurt is meestal geen probleem.</p>
+      <div class="plaatsen">
+        <a class="plaats" href="#"><div><h3>Badhoevedorp</h3><p>Rustige wijken om te beginnen, de A9 vlakbij voor snelweglessen.</p></div><svg class="pijl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="plaats" href="#"><div><h3>Hoofddorp</h3><p>Veel rotondes en fietsverkeer. Wie hier leert rijden, kan overal uit de voeten.</p></div><svg class="pijl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="plaats" href="#"><div><h3>Vijfhuizen</h3><p>Overzichtelijke polderwegen, ideaal voor de eerste lessen.</p></div><svg class="pijl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <svg viewBox="0 0 520 430" fill="none" aria-label="Kaart van de regio Haarlemmermeer" role="img" style="border-radius:22px;box-shadow:var(--schaduw)">
+      <rect width="520" height="430" rx="22" fill="#F3ECDD"/>
+      <g stroke="#E7DCC5" stroke-width="1.4">
+        <path d="M0 76h520M0 152h520M0 228h520M0 304h520M0 380h520"/>
+        <path d="M78 0v430M162 0v430M246 0v430M330 0v430M414 0v430"/>
+      </g>
+      <path d="M0 120 C140 100, 250 154, 340 130 S480 92, 520 110" stroke="#D8CBAE" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <path d="M100 0 C124 132, 204 254, 254 430" stroke="#D8CBAE" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <path d="M520 256 C400 242, 300 306, 180 294 S40 268, 0 280" stroke="#D8CBAE" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <text x="26" y="150" font-family="Public Sans,sans-serif" font-size="13" font-weight="600" fill="#A3947A">A9</text>
+      <text x="266" y="414" font-family="Public Sans,sans-serif" font-size="13" font-weight="600" fill="#A3947A">A4</text>
+      <g><circle cx="130" cy="114" r="36" fill="#D2A94F" opacity=".2"/><circle cx="130" cy="114" r="11" fill="#D2A94F" stroke="#fff" stroke-width="3.5"/><text x="152" y="110" font-family="Sora,sans-serif" font-weight="800" font-size="16" fill="#14161F">Badhoevedorp</text></g>
+      <g><circle cx="270" cy="266" r="44" fill="#FF5A36" opacity=".16"/><circle cx="270" cy="266" r="13" fill="#FF5A36" stroke="#fff" stroke-width="3.5"/><text x="294" y="262" font-family="Sora,sans-serif" font-weight="800" font-size="17" fill="#14161F">Hoofddorp</text></g>
+      <g><circle cx="152" cy="336" r="34" fill="#D2A94F" opacity=".2"/><circle cx="152" cy="336" r="11" fill="#D2A94F" stroke="#fff" stroke-width="3.5"/><text x="174" y="332" font-family="Sora,sans-serif" font-weight="800" font-size="16" fill="#14161F">Vijfhuizen</text></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="sectie" style="background:#fff">
+  <div class="wrap">
+    <div class="kop">
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Wat leerlingen zeggen</h2>
+    </div>
+    <div class="score"><span class="score__cijfer">4,8</span><span class="sterren" aria-hidden="true">★★★★★</span><span class="score__aantal">op basis van 127 Google-reviews</span></div>
+    <div class="reviews">
+      <div class="review"><span class="review__quote" aria-hidden="true">”</span><p>Rustige instructeur die uitlegt waaróm iets moet, niet alleen dát het moet. In één keer geslaagd.</p><div class="review__wie">Melis · Hoofddorp</div></div>
+      <div class="review"><span class="review__quote" aria-hidden="true">”</span><p>Fijn dat je zelf je lesduur kiest. Die lessen van twee uur hebben me echt vooruitgeholpen.</p><div class="review__wie">Daan · Badhoevedorp</div></div>
+      <div class="review"><span class="review__quote" aria-hidden="true">”</span><p>Ik sprak nog niet goed Nederlands. Les gehad in mijn eigen taal, dat scheelde enorm.</p><div class="review__wie">Andrei · Vijfhuizen</div></div>
+    </div>
+    <p style="font-size:.85rem;color:var(--grijs-licht);margin-top:var(--s3)">Voorbeeldteksten. Worden vervangen door echte Google-reviews.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sectie" id="vragen">
+  <div class="wrap">
+    <div class="kop">
+      <div class="merkstreep" aria-hidden="true"></div>
+      <h2>Veelgestelde vragen</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Hoe lang duurt een rijles?</summary><p>Je kiest zelf: 60, 90 of 120 minuten. Bij langere lessen ben je minder tijd kwijt aan opstarten en kom je verder in één rit. De meeste leerlingen rijden 90 minuten.</p></details>
+      <details><summary>Bieden jullie ook automaatrijles?</summary><p>Ja, je kunt volledig in de automaat lesrijden en examen doen. Houd er rekening mee dat je dan een rijbewijs krijgt waarmee je alleen automaat mag rijden.</p></details>
+      <details><summary>In welke taal krijg ik les?</summary><p>Je geeft je voorkeurstaal door bij de aanvraag, dan koppelen we je aan een instructeur die die taal spreekt. Deze website kun je rechtsboven ook in een andere taal bekijken.</p></details>
+      <details><summary>Hoe werkt annuleren?</summary><p>Tot 24 uur voor de les annuleer je kosteloos en blijft je lestegoed staan. Annuleer je later, dan wordt de les in rekening gebracht. Bij ziekte of overmacht kijken we altijd mee.</p></details>
+      <details><summary>Kan ik in termijnen betalen?</summary><p>Ja, een pakket kan in maximaal vier termijnen over vier maanden. In je leerlingomgeving zie je precies wat betaald is en wat openstaat.</p></details>
+      <details><summary>Hoeveel lessen heb ik nodig?</summary><p>Dat verschilt per persoon. De rekenhulp op deze pagina geeft een eerste indicatie, en na de proefles maakt je instructeur er een preciezere inschatting van.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLOT ============ -->
+<section class="sectie slot">
+  <span class="korrel" aria-hidden="true"></span>
+  <div class="wrap slot__in">
+    <h2>Klaar om te <em>beginnen?</em></h2>
+    <p>Eén proefles is genoeg om te weten of het klikt. Vrijblijvend, en je weet meteen hoeveel lessen je waarschijnlijk nodig hebt.</p>
+    <div class="slot__knoppen">
+      <a class="btn btn--zand" href="#aanvraag">Proefles boeken
+        <svg class="pijl" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn--rand" href="tel:+31000000000">Bel 020 000 0000</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="voet">
+  <div class="wrap">
+    <div class="voet__top">
+      <div>
+        <div class="voet__merk">
+          <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="11" fill="#E9C87F"/>
+            <path d="M11 30 L20 10 L29 30" stroke="#14161F" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 25 H25" stroke="#14161F" stroke-width="3.6" stroke-linecap="round" opacity=".45"/>
+          </svg>
+          Prorijschool
+        </div>
+        <p style="max-width:34ch">Rijles in Badhoevedorp, Hoofddorp en Vijfhuizen.</p>
+        <div style="margin-top:var(--s3);display:grid;gap:6px">
+          <a href="tel:+31000000000" style="color:#fff;font-weight:600">020 000 0000</a>
+          <a href="#">info@prorijschool.nl</a>
+        </div>
+      </div>
+      <div class="voet__grid">
+        <div><h4>Rijlessen</h4><ul><li><a href="#">Autorijles</a></li><li><a href="#">Automaat rijles</a></li><li><a href="#">Taxilessen</a></li><li><a href="#">Aanhangwagenrijles</a></li></ul></div>
+        <div><h4>Theorie</h4><ul><li><a href="#">Cursus op locatie</a></li><li><a href="#">Online theorie</a></li><li><a href="#">Cursusdata</a></li><li><a href="#">Theorie inloggen</a></li></ul></div>
+        <div><h4>Regio</h4><ul><li><a href="#">Badhoevedorp</a></li><li><a href="#">Hoofddorp</a></li><li><a href="#">Vijfhuizen</a></li><li><a href="#">Pakketten en prijzen</a></li></ul></div>
+        <div><h4>Prorijschool</h4><ul><li><a href="#">Over ons</a></li><li><a href="#">Contact</a></li><li><a href="#">Inschrijven</a></li><li><a href="#">Inloggen</a></li></ul></div>
+      </div>
+    </div>
+    <div class="voet__onder">
+      <span>© 2026 Prorijschool</span>
+      <div class="voet__talen">
+        <a href="/" aria-current="true" hreflang="nl">NL</a>
+        <a href="/en/" hreflang="en">EN</a>
+        <a href="/tr/" hreflang="tr">TR</a>
+      </div>
+      <span><a href="#">Privacyverklaring</a> · <a href="#">Algemene voorwaarden</a> · <a href="#">Cookie-instellingen</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-zwevend" href="#" aria-label="Stuur een WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.2 1.3-2 1.4-.5.1-1.2.1-3.8-.8-3.2-1.3-5.2-4.5-5.4-4.7-.1-.2-1.2-1.6-1.2-3.1 0-1.5.8-2.2 1-2.5.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2 0 .4-.1.6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.2.1.4.1.6-.1l.8-1c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
+
+<nav class="mobbar" aria-label="Snelle acties">
+  <a href="tel:+31000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>Bellen</a>
+  <a href="#" class="wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.2 1.3-2 1.4-.5.1-1.2.1-3.8-.8-3.2-1.3-5.2-4.5-5.4-4.7-.1-.2-1.2-1.6-1.2-3.1 0-1.5.8-2.2 1-2.5.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2 0 .4-.1.6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.2.1.4.1.6-.1l.8-1c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.7-.1 1.4z"/></svg>WhatsApp</a>
+  <a href="#aanvraag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M16 2v4M8 2v4M3 10h18" stroke-linecap="round"/></svg>Proefles</a>
+  <button type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>Menu</button>
+</nav>
+
+<script>
+(function(){
+  var st={auto:1,erv:34,duur:90};
+  var tarief={60:62,90:89,120:116}, examen=380;
+  function toon(){
+    var lessen=Math.round(st.erv*st.auto/(st.duur/60));
+    var totaal=lessen*tarief[st.duur]+examen;
+    document.getElementById('bedrag').textContent='€ '+totaal.toLocaleString('nl-NL');
+    document.getElementById('detail').textContent='ongeveer '+lessen+' lessen van '+st.duur+' minuten, inclusief examen';
+  }
+  document.querySelectorAll('.keuze').forEach(function(k){
+    k.addEventListener('click',function(){
+      var g=k.dataset.groep;
+      document.querySelectorAll('.keuze[data-groep="'+g+'"]').forEach(function(z){z.setAttribute('aria-pressed','false');});
+      k.setAttribute('aria-pressed','true');
+      st[g]=parseFloat(k.dataset.waarde);
+      toon();
+    });
+  });
+  toon();
+})();
+</script>
+</body>
+</html>
