@@ -1,10 +1,10 @@
 /* ============================================================
-   Header- en ankeruitzonderingen
+   Aanvullingen die niet in de Elementor-editor kunnen
    ============================================================
 
-   Regels die niet in de Elementor-editor te maken zijn, omdat ze
-   op html-niveau werken of onder Elementors kleinste breekpunt
-   (767px) vallen.
+   Alles hier werkt op html/body-niveau, valt onder Elementors
+   kleinste breekpunt (767px), of gebruikt een pseudo-element.
+   Al het overige staat wel gewoon in de editor.
 
    Wordt ingeladen via functions.php, na componenten.css.
    ============================================================ */
@@ -13,18 +13,14 @@
 /* ------------------------------------------------------------
    1. Ankersprongen
    ------------------------------------------------------------
-
-   Twee problemen opgelost.
-
    scroll-behavior:smooth stond ergens aan (vermoedelijk een
    Elementor-instelling; niet terug te vinden in de stylesheets).
    Daardoor bleef de pagina bij een verse laadbeurt met #anker in
-   de URL gewoon bovenaan staan. Gemeten op prorijschool.necmardemo.nl:
-   met smooth bleef scrollY op 0, met auto sprong hij correct.
+   de URL gewoon bovenaan staan. Gemeten: met smooth bleef scrollY
+   op 0, met auto sprong hij correct.
 
    scroll-padding-top voorkomt dat de sectiekop onder de sticky
-   header verdwijnt. Headerhoogte is 91px op desktop en 78px op
-   mobiel; hier met marge.
+   header verdwijnt. Headerhoogte 91px desktop, 78px mobiel.
    ------------------------------------------------------------ */
 
 html{
@@ -38,21 +34,101 @@ html{
 
 
 /* ------------------------------------------------------------
-   2. Header onder 361px
+   2. Ruimte voor de mobiele actiebalk
    ------------------------------------------------------------
+   De balk zelf is een gewoon Elementor-element in de footer
+   (s-mobiele-balk). Alleen deze regel kan daar niet: padding op
+   body is geen Elementor-eigenschap.
+   ------------------------------------------------------------ */
 
+@media (max-width: 1024px){ body{ padding-bottom: 70px } }
+
+
+/* ------------------------------------------------------------
+   3. Header onder 361px
+   ------------------------------------------------------------
    Op zeer smalle schermen past 'Proefles boeken' niet naast het
    logo en de hamburger; dat gaf horizontale scroll op 320px.
-   Onder 361px tonen we de korte variant.
-
-   Elementor kent geen breekpunt onder 767px, vandaar dat dit
-   hier staat en niet in de editor.
-
-   Hoort bij de header-template (elementor_library id 23):
-   elementen s-header-cta en s-header-cta-kort.
+   Elementor kent geen breekpunt onder 767px.
    ------------------------------------------------------------ */
 
 @media (max-width: 360px){
   .elementor .s-header-cta{ display: none !important; }
   .elementor .s-header-cta-kort{ display: inline-block !important; }
+}
+
+
+/* ------------------------------------------------------------
+   4. Hero-sluier op homepagev2
+   ------------------------------------------------------------
+   De hero draagt de polderweg-illustratie als achtergrond.
+   Elementor accepteert geen verlooplaag met doorzichtigheid in
+   background-overlay, dus de sluier staat hier. Zonder sluier is
+   de witte tekst onleesbaar boven de lichte lucht.
+   ------------------------------------------------------------ */
+
+#aanvraag{ position: relative; isolation: isolate; }
+
+#aanvraag::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg,
+    rgba(12,14,21,.88) 0%,
+    rgba(12,14,21,.62) 42%,
+    rgba(12,14,21,.18) 68%,
+    rgba(12,14,21,0) 100%);
+}
+
+@media (max-width: 859px){
+  #aanvraag::before{
+    background: linear-gradient(180deg,
+      rgba(12,14,21,.86) 0%,
+      rgba(12,14,21,.66) 55%,
+      rgba(12,14,21,.88) 100%);
+  }
+}
+
+#aanvraag > *{ position: relative; z-index: 1; }
+
+/* Wit deel van de hero-titel; de rest blijft zandgeel. */
+.pro-wit{ color: #fff; }
+
+
+/* ------------------------------------------------------------
+   5. Rekenhulp: keuzeknoppen
+   ------------------------------------------------------------
+   Elke keuze is een <button> met een titel en een toelichting.
+   De actieve staat wordt door rekenhulp.js gezet met .is-actief;
+   een JS-gestuurde klasse kan Elementor niet zelf stylen.
+   ------------------------------------------------------------ */
+
+#rekenhulp [id^="keuze-"]{
+  transition: background-color .18s, border-color .18s, transform .18s;
+}
+
+#rekenhulp [id^="keuze-"]:hover{
+  border-color: #4A5268;
+  transform: translateY(-2px);
+}
+
+#rekenhulp [id^="keuze-"]:focus-visible{
+  outline: 2px solid #E9C87F;
+  outline-offset: 3px;
+}
+
+/* Gekozen: zandvlak, donkere tekst, vinkje ervoor. */
+#rekenhulp [id^="keuze-"].is-actief{
+  background-color: #E9C87F !important;
+  border-color: #E9C87F !important;
+}
+
+#rekenhulp [id^="keuze-"].is-actief p{ color: #2A2415 !important; }
+#rekenhulp [id^="keuze-"].is-actief p:last-child{ color: #6B5A2E !important; }
+
+#rekenhulp [id^="keuze-"].is-actief p:first-child::before{
+  content: "\2713\00a0";
+  font-weight: 800;
 }
