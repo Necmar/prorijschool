@@ -1,17 +1,58 @@
 /* ============================================================
-   320px header-uitzondering
+   Header- en ankeruitzonderingen
    ============================================================
 
-   Op zeer smalle schermen past 'Proefles boeken' niet naast het
-   logo en de hamburger. Onder 361px tonen we de korte variant.
-   Elementor kent geen breekpunt onder 767px, vandaar dat dit hier
-   staat en niet in de editor.
+   Regels die niet in de Elementor-editor te maken zijn, omdat ze
+   op html-niveau werken of onder Elementors kleinste breekpunt
+   (767px) vallen.
 
-   Hoort bij de header-template (elementor_library id 23):
-   element s-header-cta en s-header-cta-kort.
+   Wordt ingeladen via functions.php, na componenten.css.
    ============================================================ */
 
+
+/* ------------------------------------------------------------
+   1. Ankersprongen
+   ------------------------------------------------------------
+
+   Twee problemen opgelost.
+
+   scroll-behavior:smooth stond ergens aan (vermoedelijk een
+   Elementor-instelling; niet terug te vinden in de stylesheets).
+   Daardoor bleef de pagina bij een verse laadbeurt met #anker in
+   de URL gewoon bovenaan staan. Gemeten op prorijschool.necmardemo.nl:
+   met smooth bleef scrollY op 0, met auto sprong hij correct.
+
+   scroll-padding-top voorkomt dat de sectiekop onder de sticky
+   header verdwijnt. Headerhoogte is 91px op desktop en 78px op
+   mobiel; hier met marge.
+   ------------------------------------------------------------ */
+
+html{
+  scroll-behavior: auto !important;
+  scroll-padding-top: 110px;
+}
+
+@media (max-width: 767px){
+  html{ scroll-padding-top: 94px; }
+}
+
+
+/* ------------------------------------------------------------
+   2. Header onder 361px
+   ------------------------------------------------------------
+
+   Op zeer smalle schermen past 'Proefles boeken' niet naast het
+   logo en de hamburger; dat gaf horizontale scroll op 320px.
+   Onder 361px tonen we de korte variant.
+
+   Elementor kent geen breekpunt onder 767px, vandaar dat dit
+   hier staat en niet in de editor.
+
+   Hoort bij de header-template (elementor_library id 23):
+   elementen s-header-cta en s-header-cta-kort.
+   ------------------------------------------------------------ */
+
 @media (max-width: 360px){
-  .elementor .s-header-cta{display:none !important}
-  .elementor .s-header-cta-kort{display:inline-block !important}
+  .elementor .s-header-cta{ display: none !important; }
+  .elementor .s-header-cta-kort{ display: inline-block !important; }
 }
